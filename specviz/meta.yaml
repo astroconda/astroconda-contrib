@@ -1,6 +1,6 @@
 {% set name = 'specviz' %}
-{% set version = '0.2.0rc3' %}
-{% set tag = 'v0.2.0rc3' %}
+{% set version = '0.2.1rc4' %}
+{% set tag = 'v0.2.1rc4' %}
 {% set number = '0' %}
 
 package:
@@ -15,7 +15,7 @@ requirements:
   build:
     - astropy
     - cython
-    - jinja2
+    - specutils
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
@@ -28,7 +28,7 @@ requirements:
   run:
     - astropy
     - cython
-    - jinja2
+    - specutils
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
@@ -40,6 +40,7 @@ requirements:
 test:
   requires:
     - astropy
+    - specutils
   imports:
     - specviz
 
