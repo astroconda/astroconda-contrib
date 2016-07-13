@@ -9,7 +9,6 @@ package:
     version: 0.2.2
 requirements:
     build:
-    - d2to1
     - astropy >=1.1
     - cython
     - matplotlib
