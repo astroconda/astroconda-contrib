@@ -10,7 +10,6 @@ package:
 requirements:
     build:
     - d2to1
-    - nose
     - astropy >=1.1
     - cython
     - matplotlib
