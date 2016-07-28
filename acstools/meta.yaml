@@ -20,7 +20,6 @@ requirements:
     run:
     - astropy >=1.1
     - numpy x.x
-    - setuptools
     - python x.x
 source:
     git_tag: {{ version }}
