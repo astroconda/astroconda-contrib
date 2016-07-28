@@ -1,5 +1,5 @@
 {% set name = 'acstools' %}
-{% set version = '2.0.2' %}
+{% set version = '2.0.3' %}
 {% set number = '0' %}
 
 about:
@@ -13,13 +13,11 @@ package:
     version: {{ version }}
 requirements:
     build:
-    - d2to1
-    - stsci.distutils
     - python x.x
     - astropy >=1.1
     - numpy x.x
     - scipy
-    - scikit-image
+    - scikit-image >= 0.11
     - matplotlib
     - stsci.imagestats
     - stsci.tools
@@ -28,7 +26,7 @@ requirements:
     - astropy >=1.1
     - numpy x.x
     - scipy
-    - scikit-image
+    - scikit-image >= 0.11
     - matplotlib
     - stsci.imagestats
     - stsci.tools
