@@ -1,12 +1,17 @@
+
+{% set name = 'cube-tools' %}
+{% set version = '0.0.1' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/cube-tools
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: cube-tools
+    summary: Data analysis package for cubes.
 build:
-    number: '{{ environ.get("GIT_DESCRIBE_NUMBER", 0) }}'
+    number: {{ number }}
 package:
     name: cube-tools
-    version: '{{ environ.get("GIT_DESCRIBE_TAG", "0.0.0") }}'
+    version: {{ version }}
 requirements:
     build:
     - glueviz
@@ -22,7 +27,8 @@ requirements:
     - numpy x.x
     - python x.x
 source:
-    git_url: https://github.com/spacetelescope/cube-tools
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
 test:
     imports:
     - cube_tools
