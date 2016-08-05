@@ -1,33 +1,29 @@
+{% set name = 'pysynphot' %}
+{% set version = '0.9.8.4' %}
+{% set number = '0' %}
+
 about:
     home: https://github.com/spacetelescope/pysynphot
     license: BSD
-    summary: pysynphot
+    summary: Synthetic Photometry Package
 build:
-    number: '0'
-    preserve_egg_dir: 'yes'
+    number: {{ number }}
 package:
-    name: pysynphot
-    version: 0.9.8.3
+    name: {{ name }}
+    version: {{ version }}
 requirements:
     build:
-    - d2to1
-    - nose
-    - stsci.distutils
-    - astropy >=1.2
-    - cython
+    - astropy >=1.1
     - numpy x.x
-    - matplotlib
-    - setuptools
     - python x.x
+    - setuptools
     run:
-    - nose
-    - astropy >=1.2
-    - cython
+    - astropy >=1.1
     - numpy x.x
-    - matplotlib
     - python x.x
 source:
-    git_url: https://github.com/spacetelescope/pysynphot
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
 test:
     imports:
     - pysynphot
