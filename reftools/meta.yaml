@@ -1,5 +1,5 @@
 {% set name = 'reftools' %}
-{% set version = '1.7.2' %}
+{% set version = '1.7.3' %}
 {% set number = '0' %}
 
 about:
