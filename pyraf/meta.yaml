@@ -1,6 +1,6 @@
 {% set name = 'pyraf' %}
-{% set version = '2.1.10' %}
-{% set number = '3' %}
+{% set version = '2.1.11' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/pyraf
