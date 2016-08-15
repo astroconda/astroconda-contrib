@@ -6,7 +6,7 @@ build:
     number: '0'
 package:
     name: drizzlepac
-    version: 2.1.5
+    version: 2.1.6
 requirements:
     build:
     - astropy >=1.1
