@@ -23,6 +23,5 @@ set_py3k
 pip install --no-deps --upgrade --force d2to1
 if [ $PY3K -ne 0 ] ; then
 sed -i -e "s|stsci.distutils.hooks.tag_svn_revision|#removed|" setup.cfg
-2to3 -w .
 fi
 python setup.py install || exit 1
