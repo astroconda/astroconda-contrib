@@ -1,5 +1,5 @@
 {% set name = 'acstools' %}
-{% set version = '2.0.4' %}
+{% set version = '2.0.5' %}
 {% set number = '0' %}
 
 about:
