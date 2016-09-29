@@ -1,11 +1,11 @@
 {% set name = 'crds' %}
-{% set version = '7.0.1' %}
+{% set version = '7.0.7' %}
 {% set number = '0' %}
 
 about:
     home: http://www.stsci.edu/hst/observatory/crds/
     license: AURA
-    summary: CRDS is a metadata based system that maps datasets to data using mapping rules
+    summary: CRDS assigns calibration references to data using formal rules represented in simple text files
 build:
     number: {{ number }}
     preserve_egg_dir: 'no'
