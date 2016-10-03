@@ -6,7 +6,7 @@ build:
     number: '0'
 package:
     name: wfc3tools
-    version: 1.3.1
+    version: 1.3.3
 requirements:
     build:
     - d2to1
@@ -26,7 +26,7 @@ requirements:
     - scipy
     - python x.x
 source:
-    git_tag: 1.3.1
+    git_tag: 1.3.3
     git_url: https://github.com/spacetelescope/wfc3tools
 test:
     imports:
