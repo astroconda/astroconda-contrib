@@ -31,10 +31,5 @@ source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
 test:
-    requires:
-    - pytest
-    commands:
-    - test_no_input
-    - test_version_print
     imports:
     - wfc3tools
