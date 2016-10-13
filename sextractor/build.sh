@@ -2,7 +2,7 @@ export ATLAS="$PREFIX"
 OPTIONS=
 case $(uname) in
     Linux)
-        OPTIONS="--with-atlas=$PREFIX"
+        OPTIONS="--with-atlas-libdir=$CONDA_PREFIX/lib --with-atlas-incdir=$CONDA_PREFIX/include"
     ;;
 
     Darwin)
