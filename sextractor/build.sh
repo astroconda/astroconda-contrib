@@ -22,7 +22,7 @@ esac
 ./configure --prefix=$PREFIX \
     --with-fftw-libdir=$PREFIX/lib \
     --with-fftw-incdir=$PREFIX/include \
-    "${OPTIONS}"
+    ${OPTIONS}
 
 make -j ${CPU_COUNT}
 make install
