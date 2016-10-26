@@ -3,7 +3,8 @@ about:
     license: GPL
     summary: sextractor
 build:
-    number: '0'
+    number: '1' [linux]
+    number: '0' [osx]
 package:
     name: sextractor
     version: 2.19.5

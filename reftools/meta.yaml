@@ -1,37 +1,31 @@
+{% set name = 'reftools' %}
+{% set version = '1.7.3' %}
+{% set number = '0' %}
+
 about:
-    home: http://www.stsci.edu/institute/software_hardware/pyraf/stsci_python
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: reftools
+    summary: For HST reference files
 build:
-    number: '1'
-    preserve_egg_dir: 'yes'
+    number: {{ number }}
 package:
-    name: reftools
-    version: 1.7.1
+    name: {{ name }}
+    version: {{ version }}
 requirements:
     build:
-    - d2to1
-    - stsci.distutils
-    - stsci.imagestats
-    - stsci.tools
-    - pysynphot
-    - stwcs
-    - calcos
-    - scipy
+    - astropy >=1.1
     - numpy x.x
-    - setuptools
     - python x.x
+    - setuptools
     run:
-    - stsci.imagestats
-    - stsci.tools
-    - pysynphot
-    - stwcs
-    - calcos
-    - scipy
+    - astropy >=1.1
     - numpy x.x
     - python x.x
 source:
-    git_url: https://github.com/spacetelescope/reftools
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
 test:
+    commands:
+    - tdspysyn --help
     imports:
     - reftools

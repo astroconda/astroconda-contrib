@@ -6,12 +6,11 @@ build:
     number: '0'
 package:
     name: stsci-hst
-    version: 1.0.3
+    version: 1.0.4
 requirements:
     build:
     - purge_path >=1.0.0
     - acstools >=2.0.0
-    - astrolib.coords >=0.39.6
     - astropy >=1.1
     - calcos >=3.1.8
     - costools >=1.2.1
@@ -45,7 +44,6 @@ requirements:
     run:
     - purge_path >=1.0.0
     - acstools >=2.0.0
-    - astrolib.coords >=0.39.6
     - astropy >=1.1
     - calcos >=3.1.8
     - costools >=1.2.1
