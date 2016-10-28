@@ -6,7 +6,7 @@ build:
     number: '0'
 package:
     name: poppy
-    version: 0.5.0
+    version: 0.5.1
 requirements:
     build:
     - nose
@@ -31,5 +31,5 @@ requirements:
     - setuptools
     - python x.x
 source:
-    git_tag: v0.5.0
+    git_tag: v0.5.1
     git_url: https://github.com/mperrin/poppy
