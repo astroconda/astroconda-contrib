@@ -4,7 +4,6 @@ about:
     summary: jwxml
 build:
     number: '0'
-    preserve_egg_dir: 'True'
 package:
     name: jwxml
     version: 0.1.0

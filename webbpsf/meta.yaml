@@ -10,7 +10,6 @@ package:
     version: 0.5.1
 requirements:
     build:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
@@ -22,7 +21,6 @@ requirements:
     - python x.x
     - ipywidgets
     run:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
