@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: glueviz
@@ -7,10 +7,10 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  md5: 34b4923e4e2441a95b1830ede26ddca2
+  md5: 365887017580e243fb008d8109f2bc16
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 
@@ -28,18 +28,13 @@ requirements:
 
     # Required dependencies
     - python
-    - numpy
-    - pandas
+    - numpy >=1.9
+    - pandas >=0.14
     - astropy >=1
-    - matplotlib
+    - matplotlib >=1.4
     - qtpy >=1.1.1
-    - setuptools
-
-    # The conda-forge version of Qt 4.11.4 is currently broken because
-    # it doesn't include session-related functionality, so we disallow
-    # this version for now.
-    - pyqt !=4.11.4  # [linux]
-    - pyqt  # [not linux]
+    - setuptools >=1.0
+    - pyqt
 
     # Optional dependencies (defined in ``extras_require``)
     - dill
