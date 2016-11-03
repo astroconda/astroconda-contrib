@@ -1,4 +1,4 @@
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 
 package:
   name: glue-vispy-viewers
@@ -7,10 +7,10 @@ package:
 source:
   fn: glue-vispy-viewers-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-vispy-viewers/glue-vispy-viewers-{{version}}.tar.gz
-  md5: 28ca4b50dc179609d8304b4e5e8e6042
+  md5: 07b0ec9fec510352edc617e95ee86469
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -27,9 +27,7 @@ requirements:
     - scikit-image
     - matplotlib
     - qtpy
-
-    # At the moment, the 3D viewers don't yet work properly with Qt5, so we pin to 4.x
-    - pyqt 4.*
+    - pyqt
 
 test:
   imports:
