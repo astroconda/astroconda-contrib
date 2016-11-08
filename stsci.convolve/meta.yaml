@@ -1,5 +1,5 @@
 about:
-    home: https://github.com/embray/stsci.convolve
+    home: https://github.com/spacetelescope/stsci.convolve
     license: GPL
     summary: stsci.convolve
 build:
