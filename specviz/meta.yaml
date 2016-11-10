@@ -22,6 +22,7 @@ requirements:
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
+    - qtpy
     - scipy
     - yaml
     - setuptools
@@ -35,6 +36,7 @@ requirements:
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
+    - qtpy
     - scipy
     - yaml
     - numpy x.x
