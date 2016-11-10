@@ -25,6 +25,7 @@ requirements:
     - python x.x
 
 source:
+    git_tag: {{version}}
     git_url: https://github.com/spacetelescope/{{name}}.git
 
 test:
