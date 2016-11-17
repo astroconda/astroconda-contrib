@@ -4,6 +4,7 @@ mkdir -p $PREFIX/bin \
     $PREFIX/include \
     $PREFIX/share/doc/wcstools
 
+rm -rf bin/*.dSYM
 cp -a bin/* $PREFIX/bin
 cp -a libwcs/libwcs.a $PREFIX/lib
 cp -a libwcs/*.h $PREFIX/include

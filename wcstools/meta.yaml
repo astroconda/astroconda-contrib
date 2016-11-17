@@ -1,19 +1,24 @@
 {% set name = 'wcstools' %}
 {% set version = '3.9.4' %}
-{% set number = '0' %}
+{% set number = '1' %}
 about:
     home: http://tdc-www.harvard.edu/wcstools
     license: GPL
-    summary: 'For setting and using the world coordinate systems (WCS) in the headers of the most common astronomical image formats'
+    summary: |
+        For setting and using the world coordinate systems (WCS) in the
+        headers of the most common astronomical image formats
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     run:
+
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    url:
-    - http://tdc-www.harvard.edu/software/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    url: http://tdc-www.harvard.edu/software/{{ name }}/{{ name }}-{{ version }}.tar.gz

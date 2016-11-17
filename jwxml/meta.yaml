@@ -1,0 +1,24 @@
+about:
+    home: https://github.com/mperrin/jwxml
+    license: BSD
+    summary: jwxml
+build:
+    number: '0'
+package:
+    name: jwxml
+    version: 0.1.0
+requirements:
+    build:
+    - numpy x.x
+    - matplotlib
+    - python x.x
+    run:
+    - numpy x.x
+    - matplotlib
+    - python x.x
+source:
+    git_tag: v0.1.0
+    git_url: https://github.com/mperrin/jwxml
+test:
+    commands:
+    - python -c 'from jwxml.siaf import SIAF; SIAF(instr="NIRCam")'
