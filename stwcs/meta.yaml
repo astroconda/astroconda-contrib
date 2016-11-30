@@ -1,16 +1,23 @@
+{% set name = 'stwcs' %}
+{% set version = '1.2.4' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/stwcs
+    home: https://github.com/spacetelescope/{{name}}
     license: BSD
-    summary: stwcs
+    summary: |
+        WCS based distortion models and coordinate transformation
+
 build:
-    number: '0'
+    number: {{number}}
+
 package:
-    name: stwcs
-    version: 1.2.3
+    name: {{name}}
+    version: {{version}}
+
 requirements:
     build:
     - astropy >=1.1
-    - stsci.distutils
     - stsci.tools
     - setuptools
     - numpy x.x
@@ -20,8 +27,11 @@ requirements:
     - stsci.tools
     - numpy x.x
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stwcs
+    git_tag: {{version}}
+    git_url: https://github.com/spacetelescope/{{name}}.git
+
 test:
     imports:
     - stwcs

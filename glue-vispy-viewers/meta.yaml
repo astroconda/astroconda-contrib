@@ -1,4 +1,4 @@
-{% set version = "0.4" %}
+{% set version = "0.6" %}
 
 package:
   name: glue-vispy-viewers
@@ -7,7 +7,7 @@ package:
 source:
   fn: glue-vispy-viewers-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-vispy-viewers/glue-vispy-viewers-{{version}}.tar.gz
-  md5: ded543ba93070a71f322da650b792b16
+  md5: 07b0ec9fec510352edc617e95ee86469
 
 build:
   number: 0
@@ -23,16 +23,17 @@ requirements:
     - python
     - numpy
     - pyopengl
-    - glueviz
+    - glueviz >=0.9
     - scikit-image
     - matplotlib
+    - qtpy
+    - pyqt
 
 test:
-  requires:
-    - mock
-    - pytest
   imports:
     - glue_vispy_viewers
+    - glue_vispy_viewers.scatter
+    - glue_vispy_viewers.volume
 
 about:
   home: https://github.com/glue-viz/glue-vispy-viewers

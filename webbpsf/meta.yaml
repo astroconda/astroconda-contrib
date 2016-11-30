@@ -7,32 +7,34 @@ build:
     preserve_egg_dir: 'True'
 package:
     name: webbpsf
-    version: 0.5.0
+    version: 0.5.1
 requirements:
     build:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
     - matplotlib
-    - poppy >=0.5.0
+    - poppy >=0.5.1
     - six [py27]
     - webbpsf-data ==0.5.0
     - setuptools
     - python x.x
+    - ipywidgets
+    - jwxml
     run:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
     - matplotlib
-    - poppy >=0.5.0
+    - poppy >=0.5.1
     - six [py27]
     - webbpsf-data ==0.5.0
     - setuptools
     - python x.x
+    - ipywidgets
+    - jwxml
 source:
-    git_tag: v0.5.0
+    git_tag: v0.5.1
     git_url: https://github.com/mperrin/webbpsf
 test:
     commands:

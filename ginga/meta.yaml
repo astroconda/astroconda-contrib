@@ -1,11 +1,10 @@
 {% set name = 'ginga' %}
-{% set version = '2.5.20160801083400' %}
-{% set rev = 'd41f610' %}
+{% set version = 'v2.6.0' %}
 {% set number = '0' %}
 about:
     home: https://github.com/ejeschke/{{ name }}
     license: BSD
-    summary: FITS file viewer
+    summary: Astronomical data visualization
 build:
     number: {{ number }}
 package:
@@ -22,7 +21,7 @@ requirements:
     - numpy x.x
     - python x.x
 source:
-    git_rev: {{ rev }}
+    git_tag: {{ version }}
     git_url: https://github.com/ejeschke/{{ name }}.git
 test:
     commands:

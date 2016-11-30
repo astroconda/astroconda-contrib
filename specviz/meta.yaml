@@ -1,11 +1,14 @@
 {% set name = 'specviz' %}
-{% set version = '0.2.1rc5' %}
-{% set tag = 'v0.2.1rc5' %}
-{% set number = '0' %}
+{% set version = '0.2.2rc5' %}
+{% set tag = 'v0.2.2rc5' %}
+{% set number = '1' %}
 
 package:
   name: {{ name }}
   version: {{ version }}
+
+build:
+  number: {{ number }}
 
 source:
   git_tag: {{ tag }}
@@ -19,6 +22,7 @@ requirements:
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
+    - qtpy
     - scipy
     - yaml
     - setuptools
@@ -32,6 +36,7 @@ requirements:
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
+    - qtpy
     - scipy
     - yaml
     - numpy x.x

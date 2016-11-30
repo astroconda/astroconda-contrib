@@ -6,30 +6,26 @@ build:
     number: '0'
 package:
     name: poppy
-    version: 0.5.0
+    version: 0.5.1
 requirements:
     build:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
     - matplotlib
     - six [py27]
-    - mock [py27]
     - enum34 [py27]
     - setuptools
     - python x.x
     run:
-    - nose
     - astropy >=1.1
     - numpy x.x
     - scipy
     - matplotlib
     - six [py27]
-    - mock [py27]
     - enum34 [py27]
     - setuptools
     - python x.x
 source:
-    git_tag: v0.5.0
+    git_tag: v0.5.1
     git_url: https://github.com/mperrin/poppy

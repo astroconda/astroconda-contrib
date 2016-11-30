@@ -7,7 +7,7 @@ build:
     number: '0'
 package:
     name: astroimtools
-    version: '0.1'
+    version: '0.1.1'
 requirements:
     build:
     - astropy >=1.1
@@ -23,7 +23,7 @@ requirements:
     - numpy x.x
     - python x.x
 source:
-    git_tag: v0.1
+    git_tag: v0.1.1
     git_url: https://github.com/spacetelescope/astroimtools
 test:
     commands:

@@ -1,39 +1,49 @@
+{% set name = 'imexam' %}
+{% set version = '0.6.2' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/imexam
+    home: https://github.com/spacetelescope/{{name}}
     license: BSD
-    readme: README.rst
-    summary: imexam
+    summary: |
+        Designed to be a lightweight library which enables users to explore
+        data from a command line interface, through a Jupyter notebook or
+        through a Jupyter console. It can be used with multiple viewers,
+        such as DS9 or Ginga, or without a viewer as a simple library to make
+        plots and grab quick photometry information.
+
 build:
-    number: '0'
+    number: {{number}}
+
 package:
-    name: imexam
-    version: 0.5.2
+    name: {{name}}
+    version: {{version}}
+
 requirements:
     build:
-    - d2to1
-    - nose
     - astropy >=1.1
-    - numpy x.x
-    - scipy
     - cython
-    - matplotlib
-    - ipython
+    - pytest
     - setuptools
-    - mock [py27]
+    - numpy x.x
     - python x.x
     run:
-    - d2to1
-    - nose
     - astropy >=1.1
-    - numpy x.x
-    - scipy
     - cython
-    - matplotlib
+    - ginga
     - ipython
-    - mock [py27]
+    - notebook
+    - photutils
+    - matplotlib
+    - scipy
+    - numpy x.x
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/imexam
+    git_tag: {{tag}}
+    git_url: https://github.com/spacetelescope/{{name}}.git
+
 test:
     imports:
     - imexam

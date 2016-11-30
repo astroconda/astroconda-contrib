@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.9.1" %}
 
 package:
   name: glueviz
@@ -7,7 +7,7 @@ package:
 source:
   fn: glueviz-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  md5: 92dd7de2621a6ab6861cc9b689e86c3e
+  md5: 365887017580e243fb008d8109f2bc16
 
 build:
   number: 0
@@ -18,29 +18,41 @@ requirements:
 
   build:
     - python
+    - setuptools
 
   run:
-    - python
-    - numpy
-    - scipy
-    - matplotlib
-    - astropy
-    - ipython
-    - ipykernel
-    - h5py
-    - pandas
-    - pyqt
-    - qtconsole
-    - xlrd
-    - scikit-image
+
+    # The following is needed to make sure that the package works as a GUI
+    # application (glue needs to be run with python.app, not python)
     - python.app  # [osx]
 
+    # Required dependencies
+    - python
+    - numpy >=1.9
+    - pandas >=0.14
+    - astropy >=1
+    - matplotlib >=1.4
+    - qtpy >=1.1.1
+    - setuptools >=1.0
+    - pyqt
+
+    # Optional dependencies (defined in ``extras_require``)
+    - dill
+    - h5py
+    - scipy
+    - scikit-image
+    - ipython >=1
+    - ipykernel
+    - qtconsole
+    - plotly
+    - xlrd
+    - glue-vispy-viewers >=0.5
+
 test:
-  requires:
-    - mock
-    - pytest
   imports:
     - glue
+    - glue.core
+    - glue.app.qt
   commands:
     - glue --version
     - glue-deps list
@@ -54,6 +66,7 @@ app:
 about:
   home: http://glueviz.org
   license: BSD 3-Clause
+  license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
 extra:
