@@ -1,5 +1,5 @@
 {% set name = 'ginga' %}
-{% set version = 'v2.6.0' %}
+{% set version = 'v2.6.1' %}
 {% set number = '0' %}
 about:
     home: https://github.com/ejeschke/{{ name }}
