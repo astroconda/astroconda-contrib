@@ -20,7 +20,7 @@ requirements:
     - numpy x.x
     - python x.x
 source:
-    git_tag: v0.7
+    git_tag: 0.7
     git_url: https://github.com/spacetelescope/gwcs
 test:
     imports:
