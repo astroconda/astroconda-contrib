@@ -1,37 +1,36 @@
 {% set name = 'pyqtgraph' %}
-{% set version = '0.9.11' %}
-{% set number = '2' %}
+{% set version = '0.10.0' %}
+{% set tag = name + '-' + version %}
+{% set number = '0' %}
 
 about:
-    home: http://www.pyqtgraph.org/
-    license: MIT
-    summary: |
-        (Supervised master build)
-        A pure-Python graphics library for PyQt/PySide
+     home: http://www.pyqtgraph.org/
+     license: MIT
+     summary: |
+         A pure-Python graphics library for PyQt/PySide
 
 build:
-    number: {{ number }}
+     number: {{ number }}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+     name: {{ name }}
+     version: {{ version }}
 
 requirements:
-    build:
-    - setuptools
-    - numpy
-    - python x.x
-    run:
-    - pyqt
-    - pyopengl
-    - numpy
-    - python x.x
+     build:
+     - setuptools
+     - numpy
+     - python x.x
+     run:
+     - pyqt
+     - pyopengl
+     - numpy
+     - python x.x
 
 source:
-    git_rev: 670d63cd
-    git_url: https://github.com/pyqtgraph/{{ name }}.git
+     git_tag: {{ tag }}
+     git_url: https://github.com/pyqtgraph/{{ name }}.git
 
 test:
-  imports:
-    - pyqtgraph
-
+   imports:
+     - pyqtgraph

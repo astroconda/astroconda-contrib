@@ -1,7 +1,7 @@
 {% set name = 'specviz' %}
-{% set version = '0.2.2rc5' %}
-{% set tag = 'v0.2.2rc5' %}
-{% set number = '2' %}
+{% set version = '0.2.3' %}
+{% set tag = 'v0.2.3' %}
+{% set number = '0' %}
 
 package:
   name: {{ name }}
@@ -26,6 +26,7 @@ requirements:
     - scipy
     - yaml
     - setuptools
+    - six
     - numpy
     - python x.x
 
@@ -39,6 +40,7 @@ requirements:
     - qtpy
     - scipy
     - yaml
+    - six
     - numpy
     - python x.x
 
