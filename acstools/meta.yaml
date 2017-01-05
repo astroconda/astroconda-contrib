@@ -1,6 +1,6 @@
 {% set name = 'acstools' %}
 {% set version = '2.0.5' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -14,12 +14,12 @@ package:
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - setuptools
     - python x.x
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
 source:
     git_tag: {{ version }}

@@ -1,29 +1,37 @@
+{% set name = 'stsci.sphere' %}
+{% set version = '0.2' %}
+{% set number = '2' %}
+
 about:
     home: http://www.stsci.edu/institute/software_hardware
-    license: GPL
-    summary: stsci.sphere
+    license: BSD
+
 build:
-    number: '1'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.sphere
-    version: '0.2'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
     - astropy >=1.1
     - matplotlib
-    - numpy x.x
+    - numpy
     - setuptools
     - stsci.distutils
     - python x.x
     run:
     - astropy >=1.1
     - matplotlib
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_url: https://bitbucket.org/stsci_ssb/stsci.sphere
+    git_url: https://bitbucket.org/stsci_ssb/{{ name }}.git
+
 test:
     imports:
     - stsci.sphere

@@ -1,12 +1,19 @@
+{% set name = 'atlas-generic' %}
+{% set version = '3.10.2' %}
+{% set number = '0' %}
+
 about:
     home: http://sourceforge.net/projects/math-atlas/files/Stable
     license: BSD
-    summary: atlas-generic
+    summary: Automatically Tuned Linear Algebra Software
+
 build:
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: atlas-generic
-    version: 3.10.2
+    name: {{ name }}
+    version: {{ version }}
+
 source:
     fn: atlas3.10.2.tar.bz2
     url:

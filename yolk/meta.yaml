@@ -1,23 +1,31 @@
+{% set name = 'yolk' %}
+{% set version = '0.4.3' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/y/yolk
+    home: https://pypi.python.org/packages/source/y/{{ name }}
     license: BSD
-    summary: yolk
+    summary: Command-line tool for querying PyPI and Python packages installed on your system
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: yolk
-    version: 0.4.3
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: yolk-0.4.3.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 10dfabca7a020058436aec9dbad70123
-    url:
-    - https://pypi.python.org/packages/source/y/yolk/yolk-0.4.3.tar.gz
+    url: https://pypi.python.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
+
 test:
     commands:
     - yolk

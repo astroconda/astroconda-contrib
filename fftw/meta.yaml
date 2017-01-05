@@ -1,18 +1,26 @@
+{% set name = 'fftw' %}
+{% set version = '3.3.4' %}
+{% set number = '0' %}
+
 about:
     home: http://www.fftw.org
     license: GPL
-    summary: fftw
+    summary: |
+        A fast, free C FFT library; includes real-complex, multidimensional, and parallel transforms
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: fftw
-    version: 3.3.4
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - pkgconfig
     run:
     - pkgconfig
+
 source:
-    fn: fftw-3.3.4.tar.gz
-    url:
-    - http://www.fftw.org/fftw-3.3.4.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
+    url: http://www.fftw.org/{{ name }}-{{ version }}.tar.gz

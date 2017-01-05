@@ -1,16 +1,26 @@
+{% set name = 'poppy' %}
+{% set version = '0.5.1' %}
+{% set tag = 'v' + version %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/mperrin/poppy
+    home: https://github.com/mperrin/{{ name }}
     license: BSD
-    summary: poppy
+    summary: |
+        Physical optics propagation (wavefront diffraction) for optical
+        simulations, particularly of telescopes
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: poppy
-    version: 0.5.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - matplotlib
     - six [py27]
@@ -19,13 +29,14 @@ requirements:
     - python x.x
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - matplotlib
     - six [py27]
     - enum34 [py27]
     - setuptools
     - python x.x
+
 source:
-    git_tag: v0.5.1
-    git_url: https://github.com/mperrin/poppy
+    git_tag: {{ tag }}
+    git_url: https://github.com/mperrin/{{ name }}.git

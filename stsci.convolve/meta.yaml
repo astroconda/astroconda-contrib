@@ -1,32 +1,33 @@
 {% set name = 'stsci.convolve' %}
 {% set version = '2.2.0' %}
-{% set number = '0' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/{{name}}
-    license: GPL
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
     summary: "Image array convolution functions"
 
 build:
-    number: {{number}}
+    number: {{ number }}
     preserve_egg_dir: 'yes'
 
 package:
-    name: {{name}}
-    version: {{version}}
+    name: {{ name }}
+    version: {{ version }}
 
 requirements:
     build:
     - d2to1
     - stsci.distutils
-    - numpy x.x
+    - numpy
     - python x.x
     run:
-    - numpy x.x
+    - numpy
     - python x.x
 
 source:
-    git_tag: {{version}}
-    git_url: https://github.com/spacetelescope/{{name}}.git
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
 
 test:
     imports:

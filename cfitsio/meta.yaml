@@ -1,13 +1,22 @@
+{% set name = 'cfitsio' %}
+{% set version = '3.370' %}
+{% set version_short = '3370' %}
+{% set number = '1' %}
+
 about:
     home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
     license: BSD-like
-    summary: cfitsio
+    summary: CFITSIO is a library of C and Fortran subroutines for reading and
+            writing data files in FITS (Flexible Image Transport System)
+            data format
+
 build:
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: cfitsio
-    version: '3.370'
+    name: {{ name }}
+    version: {{ version }}
+
 source:
-    fn: cfitsio3370.tar.gz
-    url:
-    - ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/cfitsio3370.tar.gz
+    fn: {{ name }}{{ version_short }}.tar.gz
+    url: ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/{{ name }}{{ version_short }}.tar.gz

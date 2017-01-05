@@ -1,13 +1,20 @@
+{% set name = 'stsci.sphinxext' %}
+{% set version = '1.2.2' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/stsci.sphinxext
-    license: GPL
-    summary: stsci.sphinxext
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: A set of tools and templates to customize Sphinx for use in STScI projects
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.sphinxext
-    version: 1.2.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
@@ -19,8 +26,10 @@ requirements:
     - numpydoc
     - stsci.distutils
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.sphinxext
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - stsci.sphinxext

@@ -1,12 +1,19 @@
+{% set name = 'fitsblender' %}
+{% set version = '0.2.6' %}
+{% set number = '1' %}
+
 about:
-    home: http://github.com/spacetelescope/fitsblender
+    home: http://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: fitsblender
+    summary: Aggregate values in FITS headers
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: fitsblender
-    version: 0.2.6
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
@@ -14,16 +21,18 @@ requirements:
     - stsci.distutils
     - stsci.tools
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - stsci.tools
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_tag: 0.2.6
-    git_url: https://github.com/spacetelescope/fitsblender
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - fitsblender

@@ -1,16 +1,18 @@
-{% set version = "0.9.1" %}
+{% set name = 'glueviz' %}
+{% set version = '0.9.1' %}
+{% set number = '0' %}
 
 package:
-  name: glueviz
-  version: {{version}}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  fn: glueviz-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/g/{{ name }}/{{ name }}-{{ version }}.tar.gz
   md5: 365887017580e243fb008d8109f2bc16
 
 build:
-  number: 0
+  number: {{ number }}
   script: python setup.py install --single-version-externally-managed --record record.txt
   osx_is_app: True
 

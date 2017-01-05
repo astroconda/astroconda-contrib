@@ -1,7 +1,7 @@
 {% set name = 'drizzle' %}
 {% set version = '1.1' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -23,12 +23,12 @@ requirements:
     build:
     - astropy >=1.1
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
 
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
 
 test:

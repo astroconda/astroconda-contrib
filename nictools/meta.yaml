@@ -1,15 +1,23 @@
+{% set name = 'nictools' %}
+{% set version = '1.1.3' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/nictools
-    summary: nictools
+    home: https://github.com/spacetelescope/{{ name }}
+    summary: |
+        Python tools for NICMOS data
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: nictools
-    version: 1.1.3
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - stsci.distutils
     - stsci.tools
@@ -17,13 +25,15 @@ requirements:
     - python x.x
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - stsci.tools
     - python x.x
+
 source:
-    git_tag: 1.1.3
-    git_url: https://github.com/spacetelescope/nictools
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - nictools

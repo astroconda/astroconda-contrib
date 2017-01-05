@@ -12,8 +12,8 @@ package:
     version: {{ version }}
 
 source:
-  fn: astroquery-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/a/astroquery/astroquery-{{version}}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/a/{{ name }}/{{ name }}-{{ version }}.tar.gz
   md5: 1be83c630fcb462a711eb9c2eda0fbea
 
 build:

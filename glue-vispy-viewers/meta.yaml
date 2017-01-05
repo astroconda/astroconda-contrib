@@ -1,16 +1,18 @@
+{% set name = 'glue-vispy-viewers' %}
 {% set version = "0.6" %}
+{% set number = '0' %}
 
 package:
-  name: glue-vispy-viewers
-  version: {{version}}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  fn: glue-vispy-viewers-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/g/glue-vispy-viewers/glue-vispy-viewers-{{version}}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/g/glue-vispy-viewers/{{ name }}-{{ version }}.tar.gz
   md5: 07b0ec9fec510352edc617e95ee86469
 
 build:
-  number: 0
+  number: {{ number }}
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:

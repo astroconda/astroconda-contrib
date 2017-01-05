@@ -1,12 +1,19 @@
+{% set name = 'pydrizzle' %}
+{% set version = '6.4.4' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/pydrizzle
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: Geometrically correct and combine images using Drizzle
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: pydrizzle
-    version: 6.4.4
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
@@ -14,17 +21,19 @@ requirements:
     - setuptools
     - stsci.distutils
     - stsci.tools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - stsci.tools
     - wxpython [py27]
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_tag: 6.4.4
-    git_url: https://github.com/spacetelescope/pydrizzle
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - pydrizzle

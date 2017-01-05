@@ -1,26 +1,36 @@
+{% set name = 'stsci.numdisplay' %}
+{% set version = '1.6.1' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/embray/stsci.numdisplay
-    license: GPL
-    summary: stsci.numdisplay
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: |
+        Package for displaying numpy arrays in DS9
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.numdisplay
-    version: 1.6.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
-    - numpy x.x
+    - numpy
     - stsci.tools
     - setuptools
     - python x.x
     run:
-    - numpy x.x
+    - numpy
     - stsci.tools
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.numdisplay
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - stsci.numdisplay
