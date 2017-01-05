@@ -1,5 +1,5 @@
 about:
-    home: https://github.com/embray/stsci.tools
+    home: https://github.com/spacetelescope/stsci.tools
     license: GPL
     summary: stsci.tools
 build:
@@ -7,7 +7,7 @@ build:
     preserve_egg_dir: 'yes'
 package:
     name: stsci.tools
-    version: 3.4.1
+    version: 3.4.2.1
 requirements:
     build:
     - d2to1

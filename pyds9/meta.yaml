@@ -1,15 +1,21 @@
+{% set name = 'pyds9' %}
+{% set version = '1.9.0.dev' %}
+{% set number = '1' %}
+{% set buildstr = GIT_BUILD_STR + '_py' + CONDA_PY + '_' + PKG_BUILDNUM %}
+
 about:
-    home: https://github.com/ericmandel/pyds9
-    license: GPL
+    home: https://github.com/ericmandel/{{ name }}
+    license: BSD
     summary: |
         (Supervised master build)
         Python connection to SAOimage DS9 via XPA
 build:
-    number: '0'
-    string: {{ GIT_BUILD_STR }}
+    number: {{ number }}
+    string: {{ buildstr }}
+
 package:
-    name: pyds9
-    version: 1.9.0.dev
+    name: {{ name }}
+    version: {{ version }}
 requirements:
     build:
     - astropy
@@ -17,17 +23,17 @@ requirements:
     - ds9
     - six
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy
     - ds9
     - six
-    - numpy x.x
+    - numpy
     - python x.x
 source:
     git_rev: 3761d7ac151f8c8729d0fb6cdba017cadf278283
-    git_url: https://github.com/ericmandel/pyds9
+    git_url: https://github.com/ericmandel/{{ name }}
 test:
     imports:
     - pyds9

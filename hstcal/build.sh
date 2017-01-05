@@ -1,5 +1,7 @@
+if [[ `uname` == Darwin ]]; then
+    export CC=`which gcc`
+fi
 
-
-/usr/bin/python ./waf configure --destdir=$PREFIX
-/usr/bin/python ./waf build
-/usr/bin/python ./waf install
+./waf configure --destdir=$PREFIX
+./waf build
+./waf install
