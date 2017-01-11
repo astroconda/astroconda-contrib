@@ -14,7 +14,7 @@ exit 1
 ;;
 esac
 
-unix/configure
+unix/configure TKFLAGS="--disable-xss"  # not all machines have libXss
 make
 mkdir -p $PREFIX/bin
 cp -a bin/ds9* bin/x* $PREFIX/bin
