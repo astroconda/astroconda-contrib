@@ -7,10 +7,10 @@ about:
     home: https://github.com/spacetelescope/{{ reponame }}
     license: BSD
     summary: Synthetic photometry using Astropy
-    
+
 build:
     number: {{ number }}
-    
+
 package:
     name: {{ name }}
     version: {{ version }}
