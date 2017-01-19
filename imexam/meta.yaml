@@ -1,5 +1,5 @@
 {% set name = 'imexam' %}
-{% set version = '0.6.3' %}
+{% set version = '0.7.0' %}
 {% set tag = 'v' + version %}
 {% set number = '1' %}
 
