@@ -24,11 +24,15 @@ requirements:
     - numpy
     - setuptools
     - python x.x
+    - requests
+    - lxml
     run:
     - astropy >=1.1
     - numpy
     - python x.x
-
+    - requests
+    - lxml
+    
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
