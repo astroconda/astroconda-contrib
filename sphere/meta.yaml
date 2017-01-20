@@ -1,31 +1,36 @@
 {% set name = 'sphere' %}
-{% set version = '1.0.7' %}
+{% set version = '1.0.10' %}
 {% set number = '0' %}
 
 about:
-    home: https://github.com/spacetelescope/sphere
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: For handling spherical polygons that represent arbitrary regions of the sky 
+    summary: For handling spherical polygons that represent arbitrary regions of the sky
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
     - matplotlib
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - matplotlib
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
     git_tag: {{ version }}
-    git_url: https://github.com/spacetelescope/sphere
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - spherical_geometry

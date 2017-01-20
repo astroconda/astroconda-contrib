@@ -1,22 +1,25 @@
 {% set name = 'drizzlepac' %}
 {% set version = '2.1.6' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
-    home: https://github.com/spacetelescope/drizzlepac
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: AstroDrizzle for HST images
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
     - fitsblender
     - nictools
-    - numpy x.x
+    - numpy
     - scipy
     - stsci.convolve
     - stsci.distutils
@@ -35,7 +38,7 @@ requirements:
     - astropy >=1.1
     - fitsblender
     - nictools
-    - numpy x.x
+    - numpy
     - scipy
     - stsci.convolve
     - stsci.image
@@ -49,9 +52,11 @@ requirements:
     - pyregion
     - setuptools
     - python x.x
+
 source:
     git_tag: {{ version }}
-    git_url: https://github.com/spacetelescope/drizzlepac.git
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - drizzlepac

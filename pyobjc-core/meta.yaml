@@ -6,22 +6,26 @@ about:
     home: http://pyobjc.sourceforge.net/
     license: MIT
     summary: Python<->ObjC Interoperability Module
+
 build:
     number: {{ number }}
     preserve_egg_dir: 'true'
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
     fn: pyobjc-{{ version }}.tar.gz
-    url:
-    - https://bitbucket.org/ronaldoussoren/pyobjc/get/pyobjc-{{ version }}.tar.bz2
+    url: https://bitbucket.org/ronaldoussoren/pyobjc/get/pyobjc-{{ version }}.tar.bz2
+
 test:
     imports:
     - PyObjCTools

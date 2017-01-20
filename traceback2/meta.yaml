@@ -1,12 +1,19 @@
+{% set name = 'traceback2' %}
+{% set version = '1.4.0' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/t/traceback2
+    home: https://pypi.python.org/packages/source/t/{{ name }}
     license: BSD
-    summary: traceback2
+    summary: Backports of the traceback module
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: traceback2
-    version: 1.4.0
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - pbr
@@ -19,11 +26,12 @@ requirements:
     - linecache2
     - six
     - python x.x
+
 source:
-    fn: traceback2-1.4.0.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 9e9723f4d70bfc6308fa992dd193c400
-    url:
-    - https://pypi.python.org/packages/source/t/traceback2/traceback2-1.4.0.tar.gz
+    url: https://pypi.python.org/packages/source/t/{{ name }}/{{ name }}-{{ version }}.tar.gz
+
 test:
     imports:
     - traceback2

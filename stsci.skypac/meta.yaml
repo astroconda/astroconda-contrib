@@ -1,13 +1,20 @@
+{% set name = 'stsci.skypac' %}
+{% set version = '0.9' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/stsci.skypac
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: stsci.skypac
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.skypac
-    version: '0.9'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
@@ -17,7 +24,7 @@ requirements:
     - stsci.tools
     - stwcs
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
@@ -26,10 +33,11 @@ requirements:
     - stsci.tools
     - stwcs
     - python x.x
-    - python x.x
+
 source:
-    git_tag: '0.9'
-    git_url: https://github.com/spacetelescope/stsci.skypac
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - stsci.skypac

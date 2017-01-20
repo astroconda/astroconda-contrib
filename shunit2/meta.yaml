@@ -1,16 +1,26 @@
+{% set name = 'shunit2' %}
+{% set version = '2.0.3' %}
+{% set number = '0' %}
+
 about:
-    home: http://sourceforge.net/projects/shunit2
+    home: http://sourceforge.net/projects/{{ version }}
     license: LGPL
-    summary: shunit2
+    summary: |
+        shUnit2 is a xUnit unit test framework for Bourne based shell
+        scripts, and it is designed to work in a similar manner to JUnit,
+        PyUnit, etc
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: shunit2
-    version: 2.0.3
+    name: {{ name }}
+    version: {{ version }}
+
 source:
-    fn: shunit2-2.0.3.tgz
-    url:
-    - https://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz
+    fn: {{ name }}-{{ version }}.tgz
+    url: https://downloads.sourceforge.net/{{ name }}/{{ name }}-{{ version }}.tgz
+
 test:
     commands:
     - shunit2 --help

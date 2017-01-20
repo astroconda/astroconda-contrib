@@ -1,12 +1,19 @@
+{% set name = 'costools' %}
+{% set version = '1.2.1' %}
+{% set number = '1' %}
+
 about:
-    home: http://www.stsci.edu/institute/software_hardware
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: costools
+    summary: Tools for COS (Cosmic Origins Spectrograph)
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: costools
-    version: 1.2.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
@@ -15,18 +22,20 @@ requirements:
     - calcos
     - stsci.tools
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - calcos
     - stsci.tools
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_tag: 1.2.1
-    git_url: https://github.com/spacetelescope/costools
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     commands:
     - timefilter --help

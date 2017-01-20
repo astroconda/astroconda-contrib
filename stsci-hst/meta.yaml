@@ -1,12 +1,19 @@
+{% set name = 'stsci-hst' %}
+{% set version = '2.0.0' %}
+{% set number = '0' %}
+
 about:
-    home: http://www.stsci.edu
+    home: http://ssb.stsci.edu
     license: BSD
     summary: stsci-hst meta-package
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: stsci-hst
-    version: 1.0.4
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - purge_path >=1.0.0
@@ -39,7 +46,7 @@ requirements:
     - stwcs >=1.2.3
     - wfpc2tools >=1.0.3
     - wfc3tools >=1.3.1
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - purge_path >=1.0.0
@@ -72,5 +79,5 @@ requirements:
     - stwcs >=1.2.3
     - wfpc2tools >=1.0.3
     - wfc3tools >=1.3.1
-    - numpy x.x
+    - numpy
     - python x.x

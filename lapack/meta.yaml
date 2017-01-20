@@ -1,16 +1,27 @@
+{% set name = 'lapack' %}
+{% set version = '3.6.0' %}
+{% set number = '0' %}
+
 about:
     home: http://www.netlib.org
     license: BSD
-    summary: lapack
+    summary: |
+        LAPACK is written in Fortran 90 and provides routines for solving
+        systems of simultaneous linear equations, least-squares solutions
+        of linear systems of equations, eigenvalue problems, and singular
+        value problems
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: lapack
-    version: 3.6.0
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - cmake
+
 source:
-    fn: lapack-3.6.0.tgz
-    url:
-    - http://www.netlib.org/lapack/lapack-3.6.0.tgz
+    fn: {{ name }}-{{ version }}.tgz
+    url: http://www.netlib.org/{{ name }}/{{ name }}-{{ version }}.tgz

@@ -1,27 +1,38 @@
+{% set name = 'stsci.ndimage' %}
+{% set version = '0.10.1' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/embray/stsci.ndimage
-    license: GPL
-    summary: stsci.ndimage
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: |
+        Various functions for multi-dimensional image processing
+        --fork of scipy.ndimage
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.ndimage
-    version: 0.10.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
     - stsci.distutils
     - setuptools
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.ndimage
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - stsci.ndimage

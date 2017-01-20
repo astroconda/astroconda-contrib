@@ -30,7 +30,7 @@ requirements:
     - python x.x
     run:
     # Dependencies required at RUN-TIME go here
-    # - ...
+    - python x.x
 
 #test:
 #   imports:

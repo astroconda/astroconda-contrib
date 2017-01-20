@@ -1,18 +1,26 @@
+{% set name = 'photutils' %}
+{% set version = '0.3' %}
+{% set tag = 'v' + version %}
+{% set number = '2' %}
+
 about:
-    home: https://github.com/astropy/photutils
+    home: https://github.com/astropy/{{ name }}
     license: BSD
-    summary: photutils
+    summary: An Astropy package for photometry
+
 build:
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: photutils
-    version: 0.3
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
     - cython
     - matplotlib
-    - numpy x.x
+    - numpy
     - scikit-image
     - scipy
     - setuptools
@@ -21,14 +29,16 @@ requirements:
     - astropy >=1.1
     - cython
     - matplotlib
-    - numpy x.x
+    - numpy
     - scikit-image
     - scipy
     - setuptools
     - python x.x
+
 source:
-    git_tag: v0.3
-    git_url: https://github.com/astropy/photutils
+    git_tag: {{ tag }}
+    git_url: https://github.com/astropy/{{ name }}.git
+
 test:
     imports:
     - photutils

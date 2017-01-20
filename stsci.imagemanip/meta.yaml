@@ -1,27 +1,36 @@
+{% set name = 'stsci.imagemanip' %}
+{% set version = '1.1.2' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/embray/stsci.imagemanip
-    license: GPL
-    summary: stsci.imagemanip
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: STScI general image manipulation tools
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.imagemanip
-    version: 1.1.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
-    - numpy x.x
+    - numpy
     - stsci.distutils
     - stsci.tools
     - setuptools
     - python x.x
     run:
-    - numpy x.x
+    - numpy
     - stsci.tools
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.imagemanip
+    git_url: https://github.com/spacetelescope/{{ name }}
+
 test:
     imports:
     - stsci.imagemanip

@@ -1,25 +1,34 @@
+{% set name = 'astrolib.coords' %}
+{% set version = '0.39.6' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/astrolib.coords.git
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: astrolib.coords
-build:
-    number: '0'
+    summary: Astronomical coordinates & angular separations
+
 package:
-    name: astrolib.coords
-    version: 0.39.6
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+    number: {{ number }}
+
 requirements:
     build:
     - d2to1
     - stsci.distutils
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_tag: 0.39.6
-    git_url: https://github.com/spacetelescope/astrolib.coords.git/
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - astrolib.coords

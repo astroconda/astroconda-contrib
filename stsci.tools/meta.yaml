@@ -1,13 +1,21 @@
+{% set name = 'stsci.tools' %}
+{% set version = '3.4.4' %}
+{% set number = '0' %}
+
 about:
     home: https://github.com/spacetelescope/stsci.tools
-    license: GPL
-    summary: stsci.tools
+    license: BSD
+    summary: |
+        Collection of tools specific to STScI packages
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.tools
-    version: 3.4.2.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
@@ -15,16 +23,19 @@ requirements:
     - pytools
     - setuptools
     - stsci.distutils
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - pytools
     - stsci.distutils
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.tools
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}
+
 test:
     imports:
     - stsci.tools

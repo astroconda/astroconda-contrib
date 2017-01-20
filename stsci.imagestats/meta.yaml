@@ -1,25 +1,35 @@
+{% set name = 'stsci.imagestats' %}
+{% set version = '1.4.1' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/embray/stsci.imagestats
-    license: GPL
-    summary: stsci.imagestats
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: |
+        Compute various useful statistical values for array objects
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'yes'
+
 package:
-    name: stsci.imagestats
-    version: 1.4.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
     - stsci.distutils
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/stsci.imagestats
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - stsci.imagestats

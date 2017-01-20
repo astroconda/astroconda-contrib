@@ -1,21 +1,29 @@
+{% set name = 'appdirs' %}
+{% set version = '1.4.0' %}
+{% set number = '0' %}
+
 about:
-    home: http://github.com/ActiveState/appdirs
+    home: http://github.com/ActiveState/{{ name }}
     license: MIT
-    summary: A small Python module for determining appropriate platform-specific dirs,
+    summary: |
+        A small Python module for determining appropriate platform-specific dirs
         e.g. a "user data dir".
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: appdirs
-    version: 1.4.0
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: appdirs-1.4.0.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 1d17b4c9694ab84794e228f28dc3275b
-    url:
-    - https://pypi.python.org/packages/source/a/appdirs/appdirs-1.4.0.tar.gz
+    url: https://pypi.python.org/packages/source/a/{{ name }}/{{ name }}-{{ version }}.tar.gz

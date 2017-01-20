@@ -1,15 +1,18 @@
 {% set name = 'calcos' %}
 {% set version = '3.1.8' %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
     summary: Calibration for HST/COS
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - d2to1
@@ -18,17 +21,19 @@ requirements:
     - stsci.distutils
     - stsci.tools
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - scipy
     - stsci.tools
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     commands:
     - calcos -r

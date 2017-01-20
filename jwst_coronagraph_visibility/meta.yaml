@@ -1,0 +1,45 @@
+{% set name = 'jwst_coronagraph_visibility' %}
+{% set version = '0.1.0' %}
+{% set number = '0' %}
+
+about:
+    # Package homepage
+    home: https://github.com/spacetelescope/jwst_coronagraph_visibility
+    # Package license
+    license: BSD-3-Clause
+    # A brief description
+    summary: Visualize approximate pointing constraints for JWST coronagraphs.
+
+package:
+    # Define these values above
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+    # Define this value above
+    number: {{ number }}
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
+requirements:
+    build:
+    - setuptools
+    - python x.x
+    - numpy
+    - matplotlib
+    - tk
+    - requests
+    - jwxml >=0.2.0
+    run:
+    - python x.x
+    - numpy
+    - matplotlib
+    - requests
+    - tk
+    - jwxml >=0.2.0
+
+test:
+   imports:
+   - jwst_coronagraph_visibility.skyvec2ins

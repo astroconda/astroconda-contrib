@@ -1,12 +1,20 @@
+{% set name = 'asdf-standard' %}
+{% set version = '1.0.0' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/asdf-standard
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: asdf-standard
+    summary: Standards reference for ASDF
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: asdf-standard
-    version: 1.0.0
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - sphinx
@@ -21,6 +29,7 @@ requirements:
     - astropy >=1.1
     - setuptools
     - python x.x
+
 source:
-    git_tag: v1.0.0
-    git_url: https://github.com/spacetelescope/asdf-standard
+    git_tag: {{ tag }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git

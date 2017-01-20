@@ -1,21 +1,25 @@
 {% set name = 'hstcal' %}
 {% set version = '1.1.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
-    home: https://github.com/spacetelescope/hstcal
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: Calibration for HST/WFC3, HST/ACS, and HST/STIS
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - gcc >=4.6 [osx]
     run:
     - libgcc >=4.6 [osx]
+
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git

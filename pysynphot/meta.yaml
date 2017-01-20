@@ -1,6 +1,6 @@
 {% set name = 'pysynphot' %}
 {% set version = '0.9.8.5' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/pysynphot
@@ -14,12 +14,12 @@ package:
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
     - setuptools
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
 source:
     git_tag: {{ version }}

@@ -1,18 +1,28 @@
+{% set name = 'xpa' %}
+{% set version = '2.1.18' %}
+{% set tag = 'v'+version %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/ericmandel/xpa
+    home: https://github.com/ericmandel/{{ name }}
     license: MIT
     summary: Provides seamless communication between many kinds of Unix programs
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: xpa
-    version: 2.1.17
+    name: {{ name }}
+    version: {{ version }}
+
 source:
-    git_tag: v2.1.17
-    git_url: https://github.com/ericmandel/xpa
+    git_tag: {{ tag }}
+    git_url: https://github.com/ericmandel/{{ name }}.git
+
 test:
     commands:
     - test -x `which xpaget`
     - test -x `which xpaset`
     - test -x `which xpainfo`
     - test -x `which xpaaccess`
+    - test -x `which xpans`

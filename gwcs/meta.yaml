@@ -1,27 +1,36 @@
+{% set name = 'gwcs' %}
+{% set version = '0.7' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/spacetelescope/gwcs
-    license: GPL
-    summary: gwcs
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: Generalized World Coordinate System
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: gwcs
-    version: 0.6rc1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - asdf
     - astropy >=1.1
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - asdf
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_tag: v0.6rc1
-    git_url: https://github.com/spacetelescope/gwcs
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - gwcs

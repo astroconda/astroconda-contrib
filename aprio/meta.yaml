@@ -4,14 +4,17 @@
 {% set number = '0' %}
 
 about:
-    home: http://bitbucket.org/jhunkeler/aprio
+    home: http://bitbucket.org/jhunkeler/{{ name }}
     license: GPL
     summary: aprio is an automatic renice daemon.
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - python x.x
@@ -24,6 +27,7 @@ requirements:
     - python-daemon
     - docutils
     - python x.x
+
 source:
     git_tag: {{ tag }}
     git_url: https://bitbucket.org/jhunkeler/{{ name }}.git

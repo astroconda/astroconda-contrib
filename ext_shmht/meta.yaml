@@ -1,12 +1,19 @@
+{% set name = 'ext_shmht' %}
+{% set version = '0.1' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/stsci-ssb/ext_shmht
+    home: https://github.com/stsci-ssb/{{ name }}
     license: BSD
-    summary: ext_shmht
+    summary: Shared memory extension
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: ext_shmht
-    version: '0.1'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
@@ -14,8 +21,10 @@ requirements:
     run:
     - six
     - python x.x
+
 source:
-    git_url: https://github.com/stsci-ssb/ext_shmht
+    git_url: https://github.com/stsci-ssb/{{ name }}.git
+
 test:
     imports:
     - ext_shmht

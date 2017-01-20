@@ -1,17 +1,26 @@
+{% set name = 'webbpsf' %}
+{% set version = '0.5.1' %}
+{% set tag = 'v' + version %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/mperrin/webbpsf
+    home: https://github.com/mperrin/{{ name }}
     license: BSD
-    summary: webbpsf
+    summary: |
+        Creates simulated point spread functions for the James Webb Space Telescope
+
 build:
-    number: '0'
+    number: {{ number }}
     preserve_egg_dir: 'True'
+
 package:
-    name: webbpsf
-    version: 0.5.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - matplotlib
     - poppy >=0.5.1
@@ -23,7 +32,7 @@ requirements:
     - jwxml
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - scipy
     - matplotlib
     - poppy >=0.5.1
@@ -33,9 +42,11 @@ requirements:
     - python x.x
     - ipywidgets
     - jwxml
+
 source:
-    git_tag: v0.5.1
+    git_tag: {{ tag }}
     git_url: https://github.com/mperrin/webbpsf
+
 test:
     commands:
     - WEBBPSF_PATH=$PREFIX/share/webbpsf-data python -c 'import webbpsf'
