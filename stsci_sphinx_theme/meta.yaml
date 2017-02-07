@@ -1,0 +1,32 @@
+{% set name = 'stsci_sphinx_theme' %}
+{% set version = '0.1.0' %}
+{% set tag = 'v0.1.0' %}
+{% set number = '0' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+build:
+  number: {{ number }}
+
+source:
+  git_tag: {{ tag }}
+  git_url: https://github.com/spacetelescope/stsci_sphinx_theme.git
+
+requirements:
+  build:
+    - sphinx >=1.1
+
+  run:
+    - sphinx >=1.1
+
+test:
+  requires:
+    - stsci_sphinx_theme
+  imports:
+    - stsci_sphinx_theme
+
+about:
+  home: https://github.com/spacetelescope/stsci_sphinx_theme
+  license: BSD
