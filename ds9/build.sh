@@ -1,16 +1,16 @@
 
-case "$(uname)" in
-Linux)
-LDFLAGS='-m64'
-;;
-Darwin)
-LDFLAGS='-arch x86_64 -m64'
-
-sed -i -e '/codesign/d' ds9/unix/Makefile.in
-;;
+os=`uname`
+case $os in
+    Linux)
+        LDFLAGS='-m64'
+    ;;
+    Darwin)
+        LDFLAGS='-arch x86_64 -m64'
+        sed -i -e '/codesign/d' ds9/unix/Makefile.in
+    ;;
 *)
-echo "Unsupported"
-exit 1
+    echo "Unsupported operating system: $os"
+    exit 1
 ;;
 esac
 
