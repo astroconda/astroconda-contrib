@@ -1,6 +1,6 @@
 {% set name = 'stsci_sphinx_theme' %}
 {% set version = '0.1.0' %}
-{% set tag = 'v0.1.0' %}
+{% set tag = 'v' + version %}
 {% set number = '0' %}
 
 package:
