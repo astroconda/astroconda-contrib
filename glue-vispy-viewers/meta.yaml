@@ -1,5 +1,5 @@
 {% set name = 'glue-vispy-viewers' %}
-{% set version = "0.6" %}
+{% set version = "0.7.1" %}
 {% set number = '0' %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/g/glue-vispy-viewers/{{ name }}-{{ version }}.tar.gz
-  md5: 07b0ec9fec510352edc617e95ee86469
+  md5: 2189493a5070024ff3c412307a6a5a7e
 
 build:
   number: {{ number }}
@@ -21,15 +21,19 @@ requirements:
     - python
     - setuptools
 
-  run:
+run:
     - python
     - numpy
     - pyopengl
-    - glueviz >=0.9
+    - glueviz >=0.10
     - scikit-image
     - matplotlib
     - qtpy
     - pyqt
+
+    # Temporary: the scikit-image conda package is missing the dask dependency
+    # so we add it here for now
+    - dask
 
 test:
   imports:
@@ -41,7 +45,3 @@ about:
   home: https://github.com/glue-viz/glue-vispy-viewers
   license: BSD 3-Clause
   summary: 3D viewers for Glue
-
-extra:
-  recipe-maintainers:
-    - astrofrog

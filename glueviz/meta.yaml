@@ -1,5 +1,5 @@
 {% set name = 'glueviz' %}
-{% set version = '0.9.1' %}
+{% set version = '0.10.0' %}
 {% set number = '0' %}
 
 package:
@@ -9,11 +9,15 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/g/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: 365887017580e243fb008d8109f2bc16
+  md5: 1bdd8b6925fb028938ee3affd7b95059
 
 build:
   number: {{ number }}
   script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - glue = glue.main:main
+    - glue-config = glue.config_gen:main
+    - glue-deps = glue._deps:main
   osx_is_app: True
 
 requirements:
@@ -21,6 +25,7 @@ requirements:
   build:
     - python
     - setuptools
+    - pyqt
 
   run:
 
@@ -32,23 +37,27 @@ requirements:
     - python
     - numpy >=1.9
     - pandas >=0.14
-    - astropy >=1
+    - astropy >=1.3
     - matplotlib >=1.4
     - qtpy >=1.1.1
+    - ipython >=4.0
+    - ipykernel
+    - qtconsole
+    - dill >=0.2
+    - glue-vispy-viewers >=0.6
+    - xlrd >=1.0
+    - h5py >=2.4
     - setuptools >=1.0
     - pyqt
 
     # Optional dependencies (defined in ``extras_require``)
-    - dill
-    - h5py
     - scipy
     - scikit-image
-    - ipython >=1
-    - ipykernel
-    - qtconsole
     - plotly
-    - xlrd
-    - glue-vispy-viewers >=0.5
+
+    # Temporary: the scikit-image conda package is missing the dask dependency
+    # so we add it here for now
+    - dask
 
 test:
   imports:
@@ -70,7 +79,3 @@ about:
   license: BSD 3-Clause
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
-
-extra:
-  recipe-maintainers:
-    - astrofrog
