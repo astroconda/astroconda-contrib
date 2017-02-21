@@ -1,9 +1,9 @@
 {% set name = 'pysynphot' %}
-{% set version = '0.9.8.5' %}
-{% set number = '1' %}
+{% set version = '0.9.8.6' %}
+{% set number = '0' %}
 
 about:
-    home: https://github.com/spacetelescope/pysynphot
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: Synthetic Photometry Package
 build:
