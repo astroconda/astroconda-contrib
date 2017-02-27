@@ -1,3 +1,2 @@
-
 echo > README.rst
-python setup.py install || exit 1
+$PYTHON setup.py install || exit 1
