@@ -1,9 +1,9 @@
 {% set name = 'astroquery' %}
-{% set version = '0.3.3' %}
+{% set version = '0.3.5' %}
 {% set number = '0' %}
 
 about:
-    home: https://github.com/spacetelescope/{{ name }}
+    home: https://github.com/astropy/{{ name }}
     license: BSD
     summary: Astroquery is a set of tools for querying astronomical web forms and databases.
 
