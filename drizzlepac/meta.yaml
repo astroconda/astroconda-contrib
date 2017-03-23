@@ -1,5 +1,5 @@
 {% set name = 'drizzlepac' %}
-{% set version = '2.1.9' %}
+{% set version = '2.1.10' %}
 {% set number = '0' %}
 
 about:
@@ -30,6 +30,7 @@ requirements:
     - stsci.skypac
     - stsci.sphere
     - stsci.stimage
+    - stsci.tools
     - stwcs
     - pyregion
     - python x.x
@@ -48,6 +49,7 @@ requirements:
     - stsci.skypac
     - stsci.sphere
     - stsci.stimage
+    - stsci.tools
     - stwcs
     - pyregion
     - setuptools
