@@ -1,6 +1,6 @@
 {% set name = 'drizzlepac' %}
 {% set version = '2.1.9' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -30,6 +30,7 @@ requirements:
     - stsci.skypac
     - stsci.sphere
     - stsci.stimage
+    - stsci.tools
     - stwcs
     - pyregion
     - python x.x
@@ -48,6 +49,7 @@ requirements:
     - stsci.skypac
     - stsci.sphere
     - stsci.stimage
+    - stsci.tools
     - stwcs
     - pyregion
     - setuptools
