@@ -1,26 +1,36 @@
+{% set name = 'pyregion' %}
+{% set version = '1.1.2' %}
+{% set number = '1' %}
+
 about:
-    home: http://www.stsci.edu/institute/software_hardware/pyraf/stsci_python
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: pyregion
+    summary: Python parser for ds9 region files
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: pyregion
-    version: 1.1.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
-    - numpy x.x
+    - numpy
     - pyparsing
     - python x.x
     - setuptools
     run:
-    - numpy x.x
+    - numpy
     - pyparsing
     - setuptools
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/pyregion
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - pyregion

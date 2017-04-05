@@ -1,31 +1,40 @@
+{% set name = 'pytools' %}
+{% set version = '2016.1' %}
+{% set number = '2' %}
+
 about:
-    home: https://pypi.python.org/pytools
+    home: https://pypi.python.org/{{ name }}
     license: MIT
     summary: A collection of tools for Python
+
 build:
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: pytools
-    version: '2016.1'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - decorator >=3.2.0
     - appdirs >=1.4.0
     - six >=1.8.0
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - decorator >=3.2.0
     - appdirs >=1.4.0
     - six >=1.8.0
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    fn: pytools-2016.1.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: d8af5c5bea24aa4a21881684dcf03b06
     url:
-    - https://pypi.python.org/packages/source/p/pytools/pytools-2016.1.tar.gz
+    - https://pypi.python.org/packages/source/p/{{ name }}/{{ name }}-{{ version }}.tar.gz
+
 test:
     imports:
     - pytools

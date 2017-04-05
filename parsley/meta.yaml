@@ -1,23 +1,31 @@
+{% set name = 'parsely' %}
+{% set version = '1.3' %}
+{% set number = '0' %}
+
 about:
     home: https://pypi.python.org/packages/source/P/Parsley
     license: BSD
     summary: parsley
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: parsley
-    version: '1.3'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: Parsley-1.3.tar.gz
+    fn: Parsley-{{ version }}.tar.gz
     md5: 92bc256e5f73810a609dc7874637ad31
-    url:
-    - https://pypi.python.org/packages/source/P/Parsley/Parsley-1.3.tar.gz
+    url: https://pypi.python.org/packages/source/P/Parsley/Parsley-{{ version }}.tar.gz
+
 test:
     imports:
     - parsley

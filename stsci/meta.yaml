@@ -1,12 +1,19 @@
+{% set name = 'stsci' %}
+{% set version = '2.0.0' %}
+{% set number = '0' %}
+
 about:
-    home: http://stsci.edu
+    home: http://ssb.stsci.edu
     license: BSD
     summary: stsci meta-package
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: stsci
-    version: 1.0.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - stsci-hst
@@ -17,12 +24,10 @@ requirements:
     - ds9 >=7.1
     - fftw >=3.3.4
     - htc_utils >=0.1
-    - imexam >=0.5.2
-    - photutils >=0.2.1
     - purge_path >=1.0.0
     - pyds9 >=1.8.1
     - pyfftw >=0.9.2
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - stsci-hst
@@ -33,10 +38,8 @@ requirements:
     - ds9 >=7.1
     - fftw >=3.3.4
     - htc_utils >=0.1
-    - imexam >=0.5.2
-    - photutils >=0.2.1
     - purge_path >=1.0.0
     - pyds9 >=1.8.1
     - pyfftw >=0.9.2
-    - numpy x.x
+    - numpy
     - python x.x

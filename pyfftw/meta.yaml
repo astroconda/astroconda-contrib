@@ -1,29 +1,39 @@
+{% set name = 'pyfftw' %}
+{% set version = '0.9.2' %}
+{% set number = '2' %}
+
 about:
     home: http://hgomersall.github.com/pyFFTW
-    license: GPL
-    summary: pyfftw
+    license: BSD
+    summary: |
+        A pythonic wrapper around FFTW, the FFT library, presenting a unified
+        interface for all the supported transforms
+
 build:
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: pyfftw
-    version: 0.9.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - fftw
     - cython
     - pkg-config [osx]
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - cython
     - fftw
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    fn: pyFFTW-0.9.2.tar.gz
-    url:
-    - https://pypi.python.org/packages/source/p/pyFFTW/pyFFTW-0.9.2.tar.gz
+    fn: pyFFTW-{{ version }}.tar.gz
+    url: https://pypi.python.org/packages/source/p/pyFFTW/pyFFTW-{{ version }}.tar.gz
+
 test:
     imports:
     - pyfftw

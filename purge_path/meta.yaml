@@ -1,18 +1,26 @@
+{% set name = 'purge_path' %}
+{% set version = '1.0.0' %}
+{% set number = '0' %}
+
 about:
-    home: http://bitbucket.org/jhunkeler/purge_path
-    license: GPL
+    home: http://bitbucket.org/jhunkeler/{{ name }}
+    license: BSD
     summary: purge_path a small PATH manipulator
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: purge_path
-    version: 1.0.0
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - python x.x
     - setuptools
     run:
     - python x.x
+
 source:
-    git_tag: 1.0.0
-    git_url: https://bitbucket.org/jhunkeler/purge_path
+    git_tag: {{ version }}
+    git_url: https://bitbucket.org/jhunkeler/{{ name }}.git

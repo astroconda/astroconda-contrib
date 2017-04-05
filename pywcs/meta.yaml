@@ -1,26 +1,36 @@
+{% set name = 'pywcs' %}
+{% set version = '1.12.1' %}
+{% set number = '1' %}
+
 about:
-    home: https://github.com/spacetelescope/pywcs
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: pywcs
+    summary: |
+        Python wrappers to WCSLIB
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: pywcs
-    version: 1.12.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - d2to1
     - stsci.distutils
     - stsci.tools
-    - numpy x.x
+    - numpy
     - setuptools
     - python x.x
     run:
     - stsci.tools
-    - numpy x.x
+    - numpy
     - python x.x
+
 source:
-    git_url: https://github.com/spacetelescope/pywcs
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - pywcs

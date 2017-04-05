@@ -1,12 +1,21 @@
+{% set name = 'd2to1' %}
+{% set version = '0.2.12' %}
+{% set number = '0' %}
+
 about:
-    home: https://github.com/embray/d2to1
-    license: GPL
-    summary: d2to1
+    home: https://github.com/embray/{{ name }}
+    license: BSD
+    summary: |
+        Allows using distutils2-like setup.cfg files for package metadata
+        with a distribute/setuptools setup.py
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: d2to1
-    version: 0.2.12
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
@@ -14,6 +23,7 @@ requirements:
     run:
     - setuptools
     - python x.x
+
 source:
-    git_tag: 0.2.12
-    git_url: https://github.com/embray/d2to1
+    git_tag: {{ version }}
+    git_url: https://github.com/embray/{{ name }}.git

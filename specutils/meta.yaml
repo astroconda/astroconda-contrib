@@ -1,7 +1,7 @@
 {% set name = 'specutils' %}
 {% set version = '0.2.1' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/astropy/specutils
@@ -13,7 +13,6 @@ package:
     version: {{ version }}
 
 build:
-    # Define this value above
     number: {{ number }}
 
 source:
@@ -26,12 +25,12 @@ requirements:
     - cython
     - scipy
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy
     - scipy
-    - numpy x.x
+    - numpy
     - python x.x
 
 test:

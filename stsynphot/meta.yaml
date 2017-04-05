@@ -1,0 +1,40 @@
+{% set reponame = 'stsynphot_refactor' %}
+{% set name = 'stsynphot' %}
+{% set version = '0.1b2' %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ reponame }}
+    license: BSD
+    summary: Synthetic photometry using Astropy for HST and JWST
+
+build:
+    number: {{ number }}
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - synphot >=0.1*
+    - astropy >=1.3
+    - scipy >=0.14
+    - numpy
+    - setuptools
+    - python x.x
+
+    run:
+    - synphot >=0.1*
+    - astropy >=1.3
+    - scipy >=0.14
+    - numpy
+    - python x.x
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ reponame }}.git
+
+test:
+    imports:
+    - stsynphot

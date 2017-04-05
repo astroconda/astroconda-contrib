@@ -1,23 +1,30 @@
+{% set name = 'selenium' %}
+{% set version = '2.49.2' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/s/selenium
+    home: https://pypi.python.org/packages/source/s/{{ name }}
     license: BSD
-    summary: selenium
+    summary: Python bindings for Selenium
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: selenium
-    version: 2.49.2
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: selenium-2.49.2.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 17cfe7c6adb2cad1f64a61cf753f0738
-    url:
-    - https://pypi.python.org/packages/source/s/selenium/selenium-2.49.2.tar.gz
+    url: https://pypi.python.org/packages/source/s/{{ name }}/{{ name }}-{{ version }}.tar.gz
 test:
     imports:
     - selenium

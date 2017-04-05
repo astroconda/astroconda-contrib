@@ -1,12 +1,20 @@
+{% set name = 'sphinxcontrib-programoutput' %}
+{% set version = '0.8' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/s/sphinxcontrib-programoutput
+    home: https://pypi.python.org/packages/source/s/{{ name }}
     license: BSD
-    summary: sphinxcontrib-programoutput
+    summary: |
+        Sphinx extension to include program output
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: sphinxcontrib-programoutput
-    version: '0.8'
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - sphinx
@@ -15,8 +23,8 @@ requirements:
     run:
     - sphinx
     - python x.x
+
 source:
-    fn: sphinxcontrib-programoutput-0.8.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: bb0be17ef13f268378b2af51ff413c58
-    url:
-    - https://pypi.python.org/packages/source/s/sphinxcontrib-programoutput/sphinxcontrib-programoutput-0.8.tar.gz
+    url: https://pypi.python.org/packages/source/s/{{ name }}/{{ name }}-{{ version }}.tar.gz

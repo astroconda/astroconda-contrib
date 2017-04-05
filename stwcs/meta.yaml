@@ -1,36 +1,36 @@
 {% set name = 'stwcs' %}
-{% set version = '1.2.4' %}
-{% set number = '0' %}
+{% set version = '1.2.5' %}
+{% set number = '1' %}
 
 about:
-    home: https://github.com/spacetelescope/{{name}}
+    home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: |
         WCS based distortion models and coordinate transformation
 
 build:
-    number: {{number}}
+    number: {{ number }}
 
 package:
-    name: {{name}}
-    version: {{version}}
+    name: {{ name }}
+    version: {{ version }}
 
 requirements:
     build:
     - astropy >=1.1
     - stsci.tools
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
     run:
     - astropy >=1.1
     - stsci.tools
-    - numpy x.x
+    - numpy
     - python x.x
 
 source:
-    git_tag: {{version}}
-    git_url: https://github.com/spacetelescope/{{name}}.git
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
 
 test:
     imports:

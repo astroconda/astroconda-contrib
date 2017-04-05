@@ -1,20 +1,23 @@
 {% set name = 'wfc3tools' %}
-{% set version = '1.3.3' %}
-{% set number = '0' %}
+{% set version = '1.3.4' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
     license: BSD
     summary: For analyzing and calibrating HST-WFC3 data
+
 build:
     number: {{ number }}
+
 package:
     name: {{ name }}
     version: {{ version }}
+
 requirements:
     build:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - setuptools
     - python x.x
     - matplotlib
@@ -22,14 +25,16 @@ requirements:
     - stsci.tools
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
     - stsci.tools
     - matplotlib
     - scipy
+
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
+
 test:
     imports:
     - wfc3tools

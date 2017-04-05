@@ -1,0 +1,35 @@
+{% set name = 'jwst_gtvt' %}
+{% set version = '0.0.2' %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: |
+        Calculates the allowed position angle for a given Right Ascension and
+        Declination for each instrument.
+
+build:
+    number: {{ number }}
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - astropy
+    - matplotlib
+    - numpy
+    - setuptools
+    - python x.x
+
+    run:
+    - astropy
+    - matplotlib
+    - numpy
+    - python x.x
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git

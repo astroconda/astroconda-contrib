@@ -1,23 +1,32 @@
+{% set name = 'mechanize' %}
+{% set version = '0.2.5' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/m/mechanize
+    home: https://pypi.python.org/packages/source/m/{{ name }}
     license: BSD
-    summary: mechanize
+    summary: Stateful programmatic web browsing
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: mechanize
-    version: 0.2.5
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: mechanize-0.2.5.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 32657f139fc2fb75bcf193b63b8c60b2
     url:
-    - https://pypi.python.org/packages/source/m/mechanize/mechanize-0.2.5.tar.gz
+    - https://pypi.python.org/packages/source/m/{{ name }}/{{ name }}-{{ version }}.tar.gz
+
 test:
     imports:
     - mechanize

@@ -1,0 +1,46 @@
+{% set name = 'mosviz' %}
+{% set version = '0.0.1' %}
+{% set tag = 'v' + version %}
+{% set number = '2' %}
+
+about:
+  home: https://github.com/spacetelescope/mosviz
+  license: BSD
+  summary: |
+        Quick-look analysis and visualization tool for multi-object spectroscopy
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+build:
+  number: {{ number }}
+
+source:
+  git_tag: {{ tag }}
+  git_url: https://github.com/spacetelescope/mosviz.git
+
+requirements:
+  build:
+    - astropy
+    - specutils
+    - glueviz >=0.9.0
+    - matplotlib >=1.5.3
+    - numpy
+    - python x.x
+
+  run:
+    - astropy
+    - specutils
+    - glueviz >=0.9.0
+    - matplotlib >=1.5.3
+    - numpy
+    - python x.x
+
+test:
+  requires:
+    - astropy
+    - specutils
+  imports:
+    - mosviz
+

@@ -1,23 +1,31 @@
+{% set name = 'threading2' %}
+{% set version = '0.2.1' %}
+{% set number = '0' %}
+
 about:
-    home: https://pypi.python.org/packages/source/t/threading2
+    home: https://pypi.python.org/packages/source/t/{{ name }}
     license: BSD
-    summary: threading2
+    summary: like the standard threading module, but awesomer
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: threading2
-    version: 0.2.1
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - setuptools
     - python x.x
     run:
     - python x.x
+
 source:
-    fn: threading2-0.2.1.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
     md5: 4ffb227b9a0e1f3e2a42f69f92a47bae
-    url:
-    - https://pypi.python.org/packages/source/t/threading2/threading2-0.2.1.tar.gz
+    url: https://pypi.python.org/packages/source/t/{{ name }}/{{ name }}-{{ version }}.tar.gz
+
 test:
     imports:
     - threading2

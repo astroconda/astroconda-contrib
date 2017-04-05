@@ -1,66 +1,27 @@
-{% set version = "0.9.0" %}
+# NOTE: this is a meta-package that includes the core glue code as well as stable
+# plugins. This is the main conda package we want in the Navigator, so we add the
+# app: entry here and not in the glue-core package.
+
+{% set name = 'glueviz' %}
+{% set version = '0.10.1' %}
+{% set number = '0' %}
 
 package:
-  name: glueviz
-  version: {{version}}
-
-source:
-  fn: glueviz-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/g/glueviz/glueviz-{{version}}.tar.gz
-  md5: 34b4923e4e2441a95b1830ede26ddca2
+  name: {{ name }}
+  version: {{ version }}
 
 build:
-  number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
-  osx_is_app: True
+  number: {{ number }}
 
 requirements:
-
   build:
     - python
     - setuptools
+    - glue-vispy-viewers >=0.7.2
 
   run:
-
-    # The following is needed to make sure that the package works as a GUI
-    # application (glue needs to be run with python.app, not python)
-    - python.app  # [osx]
-
-    # Required dependencies
-    - python
-    - numpy
-    - pandas
-    - astropy >=1
-    - matplotlib
-    - qtpy >=1.1.1
-    - setuptools
-
-    # The conda-forge version of Qt 4.11.4 is currently broken because
-    # it doesn't include session-related functionality, so we disallow
-    # this version for now.
-    - pyqt !=4.11.4  # [linux]
-    - pyqt  # [not linux]
-
-    # Optional dependencies (defined in ``extras_require``)
-    - dill
-    - h5py
-    - scipy
-    - scikit-image
-    - ipython >=1
-    - ipykernel
-    - qtconsole
-    - plotly
-    - xlrd
-    - glue-vispy-viewers >=0.5
-
-test:
-  imports:
-    - glue
-    - glue.core
-    - glue.app.qt
-  commands:
-    - glue --version
-    - glue-deps list
+    - glue-vispy-viewers >=0.7.2
+    - glue-ginga
 
 app:
   entry: glue
@@ -71,9 +32,4 @@ app:
 about:
   home: http://glueviz.org
   license: BSD 3-Clause
-  license_file: LICENSE
   summary: Multi-dimensional linked data exploration
-
-extra:
-  recipe-maintainers:
-    - astrofrog

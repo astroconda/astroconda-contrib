@@ -1,6 +1,5 @@
 {% set name = 'drizzle' %}
-{% set version = '1.1' %}
-{% set tag = 'v' + version %}
+{% set version = '1.5' %}
 {% set number = '0' %}
 
 about:
@@ -16,19 +15,19 @@ build:
     number: {{ number }}
 
 source:
-    git_tag: {{ tag }}
+    git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
 
 requirements:
     build:
     - astropy >=1.1
     - setuptools
-    - numpy x.x
+    - numpy
     - python x.x
 
     run:
     - astropy >=1.1
-    - numpy x.x
+    - numpy
     - python x.x
 
 test:

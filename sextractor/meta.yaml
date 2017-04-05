@@ -1,13 +1,20 @@
+{% set name = 'sextractor' %}
+{% set version = '2.19.5' %}
+
 about:
-    home: http://www.astromatic.net/download/sextractor
+    home: http://www.astromatic.net/download/{{ name }}
     license: GPL
-    summary: sextractor
+    summary: |
+        SExtractor is a program that builds a catalogue of objects from an astronomical image
+
 build:
     number: '1' [linux]
     number: '0' [osx]
+
 package:
-    name: sextractor
-    version: 2.19.5
+    name: {{ name }}
+    version: {{ version }}
+
 requirements:
     build:
     - atlas-generic [linux]
@@ -18,7 +25,7 @@ requirements:
     run:
     - atlas-generic [linux]
     - fftw
+
 source:
-    fn: sextractor-2.19.5.tar.gz
-    url:
-    - http://www.astromatic.net/download/sextractor/sextractor-2.19.5.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
+    url: http://www.astromatic.net/download/sextractor/{{ name }}-{{ version }}.tar.gz

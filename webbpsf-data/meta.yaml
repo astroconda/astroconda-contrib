@@ -1,13 +1,19 @@
+{% set name = 'webbpsf-data' %}
+{% set version = '0.5.0' %}
+{% set number = '0' %}
+
 about:
-    home: http://www.stsci.edu/~mperrin/software/webbpsf
+    home: http://www.stsci.edu/~mperrin/software/{{ name }}
     license: BSD
-    summary: webbpsf-data data files
+    summary: webbpsf data files
+
 build:
-    number: '0'
+    number: {{ number }}
+
 package:
-    name: webbpsf-data
-    version: 0.5.0
+    name: {{ name }}
+    version: {{ version }}
+
 source:
-    fn: webbpsf-data-0.5.0.tar.gz
-    url:
-    - http://www.stsci.edu/~mperrin/software/webbpsf/webbpsf-data-0.5.0.tar.gz
+    fn: {{ name }}-{{ version }}.tar.gz
+    url: http://www.stsci.edu/~mperrin/software/webbpsf/{{ name }}-{{ version }}.tar.gz

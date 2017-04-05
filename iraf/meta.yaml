@@ -1,16 +1,23 @@
+{% set name = 'iraf' %}
+{% set version = '2.16.1' %}
+{% set number = '1' %}
+
 about:
     home: http://iraf.noao.edu
     license: MIT
     summary: NOAO Image Reduction and Analysis Facility
+
 build:
     binary_relocation: False [osx]
     detect_binary_files_with_prefix: False [osx]
-    number: '1'
+    number: {{ number }}
+
 package:
-    name: iraf
-    version: 2.16.1
+    name: {{ name }}
+    version: {{ version }}
+
 source:
-    fn: iraf.tar.gz
+    fn: {{ name }}.tar.gz
     url:
-    - http://ssb.stsci.edu/stripped/linux/iraf.tar.gz [linux]
-    - http://ssb.stsci.edu/stripped/osx/iraf.tar.gz   [osx]
+    - http://ssb.stsci.edu/stripped/linux/{{ name }}.tar.gz [linux]
+    - http://ssb.stsci.edu/stripped/osx/{{ name }}.tar.gz   [osx]
