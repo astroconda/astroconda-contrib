@@ -1,9 +1,9 @@
 {% set name = 'purge_path' %}
-{% set version = '1.0.0' %}
+{% set version = '1.2.0' %}
 {% set number = '0' %}
 
 about:
-    home: http://bitbucket.org/jhunkeler/{{ name }}
+    home: https://github.com/jhunkeler/{{ name }}
     license: BSD
     summary: purge_path a small PATH manipulator
 
@@ -23,4 +23,4 @@ requirements:
 
 source:
     git_tag: {{ version }}
-    git_url: https://bitbucket.org/jhunkeler/{{ name }}.git
+    git_url: https://github.com/jhunkeler/{{ name }}.git
