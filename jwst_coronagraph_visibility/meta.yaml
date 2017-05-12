@@ -1,5 +1,5 @@
 {% set name = 'jwst_coronagraph_visibility' %}
-{% set version = '0.1.0' %}
+{% set version = '0.2.0' %}
 {% set number = '0' %}
 
 about:
@@ -31,14 +31,14 @@ requirements:
     - matplotlib
     - tk
     - requests
-    - jwxml >=0.2.0
+    - jwxml >=0.3.0
     run:
     - python x.x
     - numpy
     - matplotlib
     - requests
     - tk
-    - jwxml >=0.2.0
+    - jwxml >=0.3.0
 
 test:
    imports:
