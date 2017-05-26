@@ -1,6 +1,6 @@
 {% set name = 'crds' %}
 {% set version = '7.1.0' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://www.stsci.edu/hst/observatory/crds/
@@ -19,20 +19,25 @@ package:
 
 requirements:
     build:
-    - d2to1
     - astropy >=1.1
+    - cfitsio
     - numpy
+    - requests
+    - lxml
+    - parsley
     - setuptools
     - python x.x
-    - requests
-    - lxml
+
     run:
     - astropy >=1.1
+    - cfitsio
     - numpy
-    - python x.x
     - requests
     - lxml
-    
+    - fitsverify
+    - parsley
+    - python x.x
+
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
