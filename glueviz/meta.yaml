@@ -3,7 +3,7 @@
 # app: entry here and not in the glue-core package.
 
 {% set name = 'glueviz' %}
-{% set version = '0.10.1' %}
+{% set version = '0.10.4' %}
 {% set number = '0' %}
 
 package:
@@ -12,14 +12,18 @@ package:
 
 build:
   number: {{ number }}
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
+    - glue-core >=0.10.4
     - glue-vispy-viewers >=0.7.2
+    - glue-ginga
 
   run:
+    - glue-core >=0.10.4
     - glue-vispy-viewers >=0.7.2
     - glue-ginga
 
