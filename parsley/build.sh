@@ -1,2 +1,2 @@
-
-python setup.py install || exit 1
+echo > README
+python setup.py install
