@@ -15,11 +15,13 @@ requirements:
     build:
     - astropy >=1.1
     - numpy
+    - pytest
     - python x.x
     - setuptools
     run:
     - astropy >=1.1
     - numpy
+    - pytest
     - python x.x
 source:
     git_tag: {{ version }}
