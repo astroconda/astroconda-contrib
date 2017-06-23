@@ -14,11 +14,13 @@ package:
 requirements:
     build:
     - astropy >=1.1
+    - stsci.tools
     - numpy
     - setuptools
     - python x.x
     run:
     - astropy >=1.1
+    - stsci.tools
     - numpy
     - python x.x
 source:
