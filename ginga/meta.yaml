@@ -1,7 +1,7 @@
 {% set name = 'ginga' %}
-{% set version = '2.6.3.1' %}
-{% set tag = '301002a1b6422e03afda0544586f0bf47198f66b' %}
-{% set number = '1' %}
+{% set version = '2.6.4' %}
+{% set tag = 'v2.6.4' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/ejeschke/{{ name }}
