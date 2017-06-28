@@ -26,6 +26,7 @@ requirements:
     - lxml
     - parsley
     - setuptools
+    - lockfile
     - python x.x
 
     run:
@@ -36,6 +37,7 @@ requirements:
     - lxml
     - fitsverify
     - parsley
+    - lockfile
     - python x.x
 
 source:
