@@ -1,6 +1,6 @@
 {% set name = 'acstools' %}
 {% set version = '2.0.7' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
