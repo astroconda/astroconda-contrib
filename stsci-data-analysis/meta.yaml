@@ -1,5 +1,5 @@
 {% set name = 'stsci-data-analysis' %}
-{% set version = '2.0.1' %}
+{% set version = '2.0.2' %}
 {% set number = '0' %}
 
 about:
@@ -16,11 +16,11 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=1.3
     - astroimtools >=0.1
     - stginga >=0.1
     - specviz >=0.2.3
-    - mosviz
+    #- mosviz
     - photutils >=0.2.2
     - glueviz >=0.9.0
     - imexam >=0.6.2
@@ -28,11 +28,11 @@ requirements:
     - numpy
     - python x.x
     run:
-    - astropy >=1.1
+    - astropy >=1.3
     - astroimtools >=0.1
     - stginga >=0.1
     - specviz >=0.2.3
-    - mosviz
+    #- mosviz
     - photutils >=0.2.2
     - glueviz >=0.9.0
     - imexam >=0.6.2

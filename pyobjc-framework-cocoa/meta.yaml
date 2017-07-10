@@ -8,6 +8,7 @@ about:
     summary: Wrappers for the Cocoa frameworks on Mac OS X
 
 build:
+    skip: True [not osx]
     number: {{ number }}
     preserve_egg_dir: 'true'
 

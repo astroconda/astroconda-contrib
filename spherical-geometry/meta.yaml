@@ -1,4 +1,4 @@
-{% set name = 'sphere' %}
+{% set name = 'spherical_geometry' %}
 {% set version = '1.0.10' %}
 {% set number = '0' %}
 

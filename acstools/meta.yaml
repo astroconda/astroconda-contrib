@@ -1,5 +1,5 @@
 {% set name = 'acstools' %}
-{% set version = '2.0.7' %}
+{% set version = '2.0.8' %}
 {% set number = '0' %}
 
 about:
@@ -14,11 +14,13 @@ package:
 requirements:
     build:
     - astropy >=1.1
+    - stsci.tools
     - numpy
     - setuptools
     - python x.x
     run:
     - astropy >=1.1
+    - stsci.tools
     - numpy
     - python x.x
 source:
