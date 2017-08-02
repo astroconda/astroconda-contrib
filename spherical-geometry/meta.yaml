@@ -1,6 +1,6 @@
 {% set name = 'spherical-geometry' %}
 {% set reponame = 'spherical_geometry' %}
-{% set version = '1.0.10' %}
+{% set version = '1.0.12' %}
 {% set number = '0' %}
 
 about:
