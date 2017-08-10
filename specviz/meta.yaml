@@ -20,6 +20,7 @@ requirements:
     - cython
     - docopt
     - specutils
+    - py-expression-eval
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
@@ -36,6 +37,7 @@ requirements:
     - cython
     - docopt
     - specutils
+    - py-expression-eval
     - pyyaml
     - pyqtgraph >=0.9.11
     - pyqt
