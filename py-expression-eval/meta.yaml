@@ -1,0 +1,33 @@
+{% set name = 'py-expression-eval' %}
+{% set version = '0.3.4' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
+
+about:
+  home: https://github.com/Axiacore/{{ name }}
+  license: MIT
+  description: Python Mathematical Expression Evaluator
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+build:
+  number: {{ number }}
+
+requirements:
+  build:
+    - setuptools
+    - python
+
+  run:
+    - python
+
+source:
+  git_tag: {{ tag }}
+  git_url: https://github.com/Axiacore/{{ name }}.git
+
+test:
+  imports:
+    - py_expression_eval
+
