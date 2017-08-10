@@ -18,6 +18,7 @@ requirements:
   build:
     - astropy
     - cython
+    - docopt
     - specutils
     - pyyaml
     - pyqtgraph >=0.9.11
@@ -33,6 +34,7 @@ requirements:
   run:
     - astropy
     - cython
+    - docopt
     - specutils
     - pyyaml
     - pyqtgraph >=0.9.11
