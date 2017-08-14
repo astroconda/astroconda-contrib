@@ -1,7 +1,7 @@
 {% set name = 'webbpsf' %}
 {% set version = '0.6.0' %}
 {% set tag = 'v' + version %}
-{% set number = '1' %}
+{% set number = '0' %}
 
 about:
     home: https://webbpsf.readthedocs.io
