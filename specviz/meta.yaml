@@ -1,5 +1,5 @@
 {% set name = 'specviz' %}
-{% set version = '0.4.0' %}
+{% set version = '0.4.1' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -58,3 +58,4 @@ test:
 about:
   home: https://github.com/spacetelescope/specviz
   license: BSD
+  summary: An interactive astronomical 1D spectra analysis tool
