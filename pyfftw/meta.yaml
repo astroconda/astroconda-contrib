@@ -1,6 +1,7 @@
 {% set name = 'pyfftw' %}
-{% set version = '0.9.2' %}
-{% set number = '2' %}
+{% set version = '0.10.4' %}
+{% set badname = 'pyFFTW' %}
+{% set number = '0' %}
 
 about:
     home: http://hgomersall.github.com/pyFFTW
@@ -31,8 +32,9 @@ requirements:
     - python x.x
 
 source:
-    fn: pyFFTW-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/p/pyFFTW/pyFFTW-{{ version }}.tar.gz
+    fn: {{ badname }}-{{ version }}.tar.gz
+    url: https://pypi.python.org/packages/c2/2e/b25edc6960fc837e915eb1b38e5f0e3013e32e90aff14a1d0f4556b3d145/{{badname}}-{{version}}.tar.gz
+    md5: 7fb59450308881bb48d9f178947d950e
 
 test:
     imports:
