@@ -1,10 +1,10 @@
 {% set name = 'python-daemon' %}
-{% set version = '2.0.5' %}
+{% set version = '2.1.2' %}
 {% set number = '0' %}
 
 about:
     home: https://pagure.io/{{ name }}
-    license: Apache-2
+    license: Apache,GPL
     summary: Library to implement a well-behaved Unix daemon process.
 
 build:
@@ -25,5 +25,5 @@ requirements:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    md5: 73e7f49f525c51fa4a995aea4d80de41
-    url: https://pypi.python.org/packages/source/p/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    md5: 9c57343d81f2a96c51cffeab982b04d2
+    url: https://pypi.python.org/packages/b2/fb/a280d65f81e9d69989c8d6c4e0bb18d7280cdcd6d406a2cc3f4eb47d4402/{{name}}-{{version}}.tar.gz
