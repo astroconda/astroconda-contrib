@@ -1,12 +1,14 @@
 {% set name = 'fftw' %}
-{% set version = '3.3.4' %}
+{% set version = '3.3.5' %}
 {% set number = '0' %}
 
 about:
     home: http://www.fftw.org
     license: GPL
     summary: |
-        A fast, free C FFT library; includes real-complex, multidimensional, and parallel transforms
+        FFTW is a C subroutine library for computing the discrete
+        Fourier transform (DFT) in one or more dimensions, of arbitrary input
+        size, and of both real and complex data.
 
 build:
     number: {{ number }}
