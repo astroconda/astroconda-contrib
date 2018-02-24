@@ -1,10 +1,10 @@
 {% set name = 'stginga' %}
-{% set version = '0.2.1' %}
+{% set version = '0.3' %}
 {% if version[0] == 'v' %}
 {%   set version = version[1:] %}
 {% endif %}
 {% set tag = version %}
-{% set number = '1' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -20,15 +20,15 @@ package:
 
 requirements:
     build:
-    - ginga >=2.6.2
-    - astropy >=1.2
+    - ginga >=2.7
+    - astropy >=2
     - numpy {{ numpy }}
     - scipy
     - setuptools
     - python {{ python }}
     run:
-    - ginga >=2.6.2
-    - astropy >=1.2
+    - ginga >=2.7
+    - astropy >=2
     - numpy
     - scipy
     - python
