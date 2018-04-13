@@ -1,7 +1,9 @@
 {% set name = 'specutils' %}
-{% set version = '0.2.2' %}
-{% set tag = 'v' + version %}
-{% set number = '2' %}
+{% set version = GIT_DESCRIBE_TAG ~ ".dev" ~ GIT_DESCRIBE_NUMBER ~ "+" ~ GIT_DESCRIBE_HASH %}
+{% if version[0] == 'v' %}
+{%   set version = version[1:] %}
+{% endif %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/astropy/specutils
@@ -16,7 +18,8 @@ build:
     number: {{ number }}
 
 source:
-    git_tag: {{ tag }}
+    # This hash is set to the most recent commit on the legacy-specutils branch
+    git_rev: 5651be27d26715f9ca3aa5f8380cdc0d963ad2f6
     git_url: https://github.com/astropy/{{ name }}.git
 
 requirements:
