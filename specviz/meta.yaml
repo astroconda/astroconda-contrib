@@ -1,6 +1,8 @@
 {% set name = 'specviz' %}
-{% set version = '0.4.4' %}
-{% set tag = 'v' + version %}
+{% set version = GIT_DESCRIBE_TAG ~ ".dev" ~ GIT_DESCRIBE_NUMBER ~ "+" ~ GIT_DESCRIBE_HASH %}
+{% if version[0] == 'v' %}
+{%   set version = version[1:] %}
+{% endif %}
 {% set number = '1' %}
 
 package:
@@ -11,7 +13,7 @@ build:
   number: {{ number }}
 
 source:
-  git_tag: {{ tag }}
+  git_rev: 27ee0ba596db834d6468d3da11ae8c6fff5f2281
   git_url: https://github.com/spacetelescope/specviz.git
 
 requirements:

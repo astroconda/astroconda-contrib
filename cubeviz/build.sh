@@ -1,7 +1,7 @@
 # Replace malformed pytest requirement with something sane
 pytest_pattern='s/pytest==/pytest>=/'
 glue_pattern='s/glueviz//'
-numpy_pattern='s|numpy>=1.13|numpy>=1.11|'
+numpy_pattern='s|numpy>=1.13|numpy>=1.12|'
 
 for f in setup.*
 do
