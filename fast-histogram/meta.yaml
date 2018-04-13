@@ -1,0 +1,43 @@
+{% set name = "fast-histogram" %}
+{% set version = "0.3" %}
+{% set number = '0' %}
+{% set sha256 = "fdfab401aed9ba2bf96cac2f41679dbb26e0da520e7fd0428e8b1aa20b47ac0d" %}
+
+about:
+  home: http://github.com/astrofrog/fast-histogram
+  license: BSD
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'Fast 1D and 2D histogram functions in Python'
+  description: Fast 1D and 2D histogram functions in Python
+  doc_url: http://github.com/astrofrog/fast-histogram
+  dev_url: http://github.com/astrofrog/fast-histogram
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  number: {{ number }}
+
+requirements:
+  build:
+    - setuptools
+    - numpy {{ numpy }}
+    - python {{ python }}
+  run:
+    - numpy
+    - python
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+test:
+  imports:
+    - fast_histogram
+
+extra:
+  recipe-maintainers:
+    - astrofrog-conda-forge
