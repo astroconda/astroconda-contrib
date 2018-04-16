@@ -1,6 +1,8 @@
 {% set name = 'spectral-cube' %}
-{% set version = '0.4.1' %}
-{% set tag = 'v' + version %}
+{% set version = GIT_DESCRIBE_TAG ~ ".dev" ~ GIT_DESCRIBE_NUMBER ~ "+" ~ GIT_DESCRIBE_HASH %}
+{% if version[0] == 'v' %}
+{%   set version = version[1:] %}
+{% endif %}
 {% set number = '0' %}
 
 about:
@@ -31,7 +33,9 @@ requirements:
     - python
 
 source:
-    git_tag: {{ tag }}
+    # This commit is being used in order to provide a sufficiently recent
+    # version for cubeviz.
+    git_rev: bc2593467ea1032827f10842af32458cc5289563
     git_url: https://github.com/radio-astro-tools/{{ name }}.git
 
 test:

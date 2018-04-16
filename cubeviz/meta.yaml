@@ -1,6 +1,9 @@
 {% set name = 'cubeviz' %}
-{% set version = '0.0.2' %}
-{% set number = '1' %}
+{% set version = GIT_DESCRIBE_TAG ~ ".dev" ~ GIT_DESCRIBE_NUMBER ~ "+" ~ GIT_DESCRIBE_HASH %}
+{% if version[0] == 'v' %}
+{%   set version = version[1:] %}
+{% endif %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -18,24 +21,30 @@ requirements:
     build:
     - asdf
     - asteval
-    - astropy
-    - glue-core >=0.12.0
+    - astropy >=3.0
+    - glue-core
+    - specviz
+    - spectral-cube
+    - pytest >=3.1*
     - numpy {{ numpy }}
-    - pytest
     - setuptools
     - python {{ python }}
 
     run:
     - asdf
     - asteval
-    - astropy
-    - glue-core >=0.12.0
+    - astropy >=3.0
     - numpy
-    - pytest
+    - glue-core
+    - specviz
+    - spectral-cube
+    - pytest >=3.1*
     - python
 
 source:
-    git_tag: {{ version }}
+    # This commit points to the 0.2.0 release candidate of Cubeviz.
+    # This corresponds to tag 0.2.0rc1 on branch v0.2.x
+    git_rev: 4476c173e55136337ba8be8c776d4d8235c7e800
     git_url: https://github.com/spacetelescope/{{ name }}.git
 
 test:
