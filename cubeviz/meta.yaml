@@ -43,8 +43,8 @@ requirements:
 
 source:
     # This commit points to the 0.2.0 release candidate of Cubeviz.
-    # This corresponds to tag 0.2.0rc on branch v0.2.x
-    git_rev: b62d544c00293ec5509627dd2c2cef7800e1a9c1
+    # This corresponds to tag 0.2.0rc1 on branch v0.2.x
+    git_rev: 4476c173e55136337ba8be8c776d4d8235c7e800
     git_url: https://github.com/spacetelescope/{{ name }}.git
 
 test:
