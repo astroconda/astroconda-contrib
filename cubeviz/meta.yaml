@@ -20,7 +20,7 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core =0.13
+    - glue-core >=0.13
     - numpy {{ numpy }}
     - pytest
     - setuptools
@@ -30,7 +30,7 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core =0.13
+    - glue-core >=0.13
     - numpy
     - pytest
     - python
