@@ -1,5 +1,5 @@
 {% set name = 'cubeviz' %}
-{% set version = '0.0.2' %}
+{% set version = '0.2.0' %}
 {% set number = '1' %}
 
 about:
@@ -19,7 +19,7 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core >=0.12.0
+    - glue-core =0.13
     - numpy {{ numpy }}
     - pytest
     - setuptools
@@ -29,7 +29,7 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core >=0.12.0
+    - glue-core =0.13
     - numpy
     - pytest
     - python
