@@ -1,6 +1,6 @@
 {% set name = 'cubeviz' %}
 {% set version = '0.2.0' %}
-{% set tag = 'v' + version %}
+{% set tag = version %}
 {% set number = '1' %}
 
 about:
