@@ -1,0 +1,42 @@
+{% set name = 'pysiaf' %}
+{% set version = '0.1.8' %}
+{% set tag = version %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: 
+        Handling of Science Instrument Aperture Files (SIAF) for space telescopes
+
+source:
+    git_tag: {{ tag }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - astropy >=1.2
+    - numpy >=1.9
+    - matplotlib >=1.4.3
+    - lxml >=3.6.4
+    - scipy >=0.17
+    - openpyxl >=2.4
+    - python {{ python }}
+    - setuptools
+    - python-dateutil
+    run:
+    - astropy >=1.2
+    - numpy >=1.9
+    - matplotlib >=1.4.3
+    - lxml >=3.6.4
+    - scipy >=0.17
+    - openpyxl >=2.4
+    - python {{ python }}
+
+test:
+    imports:
+        pysiaf
