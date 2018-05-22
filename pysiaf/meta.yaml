@@ -27,7 +27,7 @@ requirements:
     - openpyxl >=2.4
     - python {{ python }}
     - setuptools
-    - python-dateutil
+    
     run:
     - astropy >=1.2
     - numpy >=1.9
@@ -39,4 +39,4 @@ requirements:
 
 test:
     imports:
-        pysiaf
+      - pysiaf
