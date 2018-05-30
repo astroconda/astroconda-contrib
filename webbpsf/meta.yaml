@@ -1,5 +1,5 @@
 {% set name = 'webbpsf' %}
-{% set version = '0.6.0' %}
+{% set version = '0.7.0' %}
 {% set tag = 'v' + version %}
 {% set number = '1' %}
 
@@ -19,29 +19,31 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=1.2
     - numpy {{ numpy }}
-    - scipy
-    - matplotlib
-    - poppy >=0.6.1
-    - six [py27]
-    - webbpsf-data ==0.6.0
+    - scipy >=0.16.0
+    - matplotlib >=1.5.0
+    - poppy >=0.7.0
+    - six
+    - webbpsf-data ==0.7.0
     - setuptools
     - python {{ python }}
     - ipywidgets
     - jwxml
+    - pysiaf >=0.1.8
     run:
-    - astropy >=1.1
-    - numpy
-    - scipy
-    - matplotlib
-    - poppy >=0.6.1
-    - six [py27]
+    - astropy >=1.2
+    - numpy {{numpy}}
+    - scipy >=0.16.0
+    - matplotlib >=1.5.0
+    - poppy >=0.7.0
+    - six
     - webbpsf-data ==0.6.0
     - setuptools
     - python
     - ipywidgets
     - jwxml
+    - pysiaf >=0.1.8
 
 source:
     git_tag: {{ tag }}
