@@ -17,6 +17,9 @@ package:
     name: {{ name }}
     version: {{ version }}
 
+build:
+    number: {{ number }}
+    
 requirements:
     build:
     - astropy >=1.2
