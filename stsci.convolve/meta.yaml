@@ -1,6 +1,6 @@
 {% set name = 'stsci.convolve' %}
-{% set version = '2.2.1' %}
-{% set number = '1' %}
+{% set version = '2.2.2' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -17,13 +17,13 @@ package:
 
 requirements:
     build:
-    - d2to1
-    - stsci.distutils
-    - numpy {{ numpy }}
-    - python {{ python }}
+      - d2to1
+      - stsci.distutils
+      - numpy {{ numpy }}
+      - python {{ python }}
     run:
-    - numpy
-    - python
+      - numpy
+      - python
 
 source:
     git_tag: {{ version }}
@@ -31,4 +31,4 @@ source:
 
 test:
     imports:
-    - stsci.convolve
+      - stsci.convolve
