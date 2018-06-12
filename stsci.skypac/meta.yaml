@@ -1,6 +1,6 @@
 {% set name = 'stsci.skypac' %}
-{% set version = '0.9.10' %}
-{% set number = '1' %}
+{% set version = '0.9.11' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -17,13 +17,12 @@ package:
 
 requirements:
     build:
-    - d2to1
     - astropy >=1.1
-    - stsci.distutils
     - stsci.imagestats
     - spherical-geometry
     - stsci.tools
     - stwcs
+    - sphinx
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
