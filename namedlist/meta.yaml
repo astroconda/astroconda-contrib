@@ -1,0 +1,33 @@
+{% set name = 'namedlist' %}
+{% set version = '1.7' %}
+{% set number = '0' %}
+{% set filename = name + '-' + version + '.tar.gz' %}
+
+about:
+    home: https://bitbucket.com/ericvsmith/{{ name }}
+    license: BSD
+    summary: Similar to namedtuple, but instances are mutable.
+
+build:
+    number: {{ number }}
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - setuptools
+    - python
+
+    run:
+    - python
+
+source:
+    fn: {{ filename }}
+    url: https://pypi.python.org/packages/88/49/f7db251a949311c4f09f583e1b3c5a7e377220d5913607e6ab453446fe7e/{{ filename }}
+    md5: 91932e6797b13df64bffcec4b5c810a3
+
+test:
+    imports:
+    - namedlist
