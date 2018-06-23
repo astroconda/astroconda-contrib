@@ -1,0 +1,38 @@
+#!/bin/bash
+
+CWD=`pwd`
+STAK=stak
+STAK_ENDPOINT=${STAK}_notebooks
+PYTHON=$CONDA_PREFIX/bin/python
+
+if [[ -z $CONDA_PREFIX ]]; then
+    echo "Not inside of a Conda environment. Aborting."
+    exit 1
+fi
+
+if [[ -d ${STAK_ENDPOINT} ]]; then
+    echo "${STAK_ENDPOINT} already exists."
+    exit 2
+fi
+
+STAK_EXISTS=`$PYTHON -c 'import stak; print(stak.__file__);'`
+if [[ -z $STAK_EXISTS ]]; then
+    echo "Unable to locate $STAK installation. Aborting."
+    exit 3
+fi
+
+STAK_VERSION=`conda list --json $STAK | python -c "import sys, json; print(json.load(sys.stdin)[0]['version'])"`
+STAK_NOTEBOOKS="${CONDA_PREFIX}/share/doc/${STAK}-${STAK_VERSION}/notebooks"
+
+if [[ ! -d $STAK_NOTEBOOKS ]]; then
+    echo "Cannot locate $STAK notebooks directory. Aborting."
+    exit 4
+fi
+
+cp -a "$STAK_NOTEBOOKS" ${STAK_ENDPOINT}
+if [[ $? == 0 ]]; then
+    echo "$STAK notebooks have been installed: ./${STAK_ENDPOINT}"
+else
+    echo "Unable to install notebooks to: $CWD/${STAK_ENDPOINT}. Please check that you have write permission."
+    exit 5
+fi

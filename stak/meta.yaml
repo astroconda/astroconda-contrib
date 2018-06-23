@@ -1,0 +1,46 @@
+{% set name = 'stak' %}
+{% set version = '0.1.0' %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: STScI software kit for astronomical data analysis
+
+build:
+    number: {{ number }}
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - astropy
+    - cython
+    - numpy
+    - scipy
+    - six
+    - stsci.tools
+    - pyparsing
+    - setuptools
+    - python x.x
+
+    run:
+    - astropy
+    - cython
+    - notebook
+    - numpy
+    - scipy
+    - six
+    - stsci.tools
+    - pyparsing
+    - python x.x
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
+test:
+    imports:
+    - stak
