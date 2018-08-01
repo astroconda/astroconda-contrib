@@ -1,6 +1,6 @@
 {% set name = 'hstcal' %}
 {% set version = '2.0.0' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -16,10 +16,20 @@ package:
 
 requirements:
     build:
-    - gcc >=4.6 [osx]
+      - cfitsio >=3.440
+      - pkg-config
+      - gcc >=4.7
+
     run:
-    - libgcc >=4.6 [osx]
+      - cfitsio
+      - libgcc >=4.7
 
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
+
+test:
+  commands:
+    - calacs.e --gitinfo
+    - otool -L $(which calacs.e) [osx]
+    - ldd $(which calacs.e) [linux]

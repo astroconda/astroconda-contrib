@@ -1,10 +1,11 @@
 if [[ `uname` == Darwin ]]; then
     export CC=`which gcc`
-    export DARWIN_FLAGS='-m64'
-    export CFLAGS="$CFLAGS $DARWIN_FLAGS"
-    export LDFLAGS="$LDFLAGS $DARWIN_FLAGS"
+    if [[ `uname -m` == x86_64 ]]; then
+        export CFLAGS="$CFLAGS -m64"
+        export LDFLAGS="$LDFLAGS -m64"
+    fi
 fi
 
-./waf configure --prefix=$PREFIX
+./waf configure --prefix=$PREFIX --release-with-symbols
 ./waf build
 ./waf install

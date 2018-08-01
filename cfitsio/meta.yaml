@@ -1,7 +1,7 @@
 {% set name = 'cfitsio' %}
 {% set version = '3.440' %}
 {% set version_short = '3440' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
@@ -19,13 +19,15 @@ package:
 
 requirements:
     build:
-      - curl
-      - gcc [osx]
+      - gcc >=4.6
 
     run:
-      - curl
-      - libgcc [osx]
+      - libgcc >=4.6
 
 source:
+    patches:
+      - 0001-cfitsio-autoconf-disable-curl.patch
+
     fn: {{ name }}{{ version_short }}.tar.gz
     url: http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/{{ name }}{{ version_short }}.tar.gz
+    #md5: 8c9b3383752f1bd663b936c297f19feb # verification broken in conda-build through 3.7.1

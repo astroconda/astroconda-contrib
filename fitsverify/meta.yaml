@@ -1,6 +1,11 @@
 {% set name = 'fitsverify' %}
 {% set version = '4.18' %}
-{% set number = '5' %}
+{% set number = '6' %}
+# number = 1 ; legacy, links against whatever is provided by available cfitsio package
+# number = 2 ; links against cfitsio < 3.410
+# number = 3 ; links against cfitsio >= 3.410
+# number = 5 ; links against cfitsio >= 3.440
+# number = 6 ; links against cfitsio >= 3.440 (no curl)
 
 about:
     home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
@@ -19,15 +24,16 @@ package:
 
 requirements:
     build:
-    - cfitsio >=3.430
+    - cfitsio >=3.440
     - pkg-config [osx]
 
     run:
-    - cfitsio >=3.430
+    - cfitsio >=3.440
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: https://heasarc.gsfc.nasa.gov/docs/software/ftools/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    #md5: 84f2930e802891392043cb8a6cbf4d5d # Checksumming broken in conda-build.
 
 test:
     commands:

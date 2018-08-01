@@ -1,6 +1,6 @@
 {% set name = 'crds' %}
 {% set version = '7.2.4' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://www.stsci.edu/hst/observatory/crds/
@@ -20,18 +20,18 @@ package:
 requirements:
     build:
     - astropy >=1.1
-    - cfitsio >=3.430
+    - cfitsio >=3.440
     - numpy {{ numpy }}
     - requests
     - lxml
     - parsley
-    - setuptools
     - filelock
+    - setuptools
     - python {{ python }}
 
     run:
     - astropy >=1.1
-    - cfitsio >=3.430
+    - cfitsio
     - numpy
     - requests
     - lxml

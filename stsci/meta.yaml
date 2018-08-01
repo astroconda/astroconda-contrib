@@ -1,6 +1,6 @@
 {% set name = 'stsci' %}
 {% set version = '3.0.2' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://ssb.stsci.edu
