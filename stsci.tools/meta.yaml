@@ -1,5 +1,5 @@
 {% set name = 'stsci.tools' %}
-{% set version = '3.4.12' %}
+{% set version = '3.4.13' %}
 {% set number = '0' %}
 
 about:
