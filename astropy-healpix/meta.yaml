@@ -19,7 +19,7 @@ requirements:
   build:
     - astropy
     - cython
-    - setuptools <38.5.1
+    - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
 
