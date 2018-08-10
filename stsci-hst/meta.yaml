@@ -1,5 +1,5 @@
 {% set name = 'stsci-hst' %}
-{% set version = '3.0.2' %}
+{% set version = '3.0.3' %}
 {% set number = '0' %}
 
 about:
@@ -31,7 +31,6 @@ requirements:
       - fitsblender >=0.3.2
       - hstcal >=1.2.0
       - nictools >=1.1.3
-      - pyregion >=1.1.2
       - pysynphot >=0.9.8.7
       - reftools >=1.7.4
       - stistools >=1.1

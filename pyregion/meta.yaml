@@ -9,6 +9,7 @@ about:
 
 build:
     number: {{ number }}
+    skip: True
 
 package:
     name: {{ name }}
