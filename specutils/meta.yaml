@@ -1,7 +1,7 @@
 {% set name = 'specutils' %}
-{% set version = '0.2.2' %}
+{% set version = '0.5.1' %}
 {% set tag = 'v' + version %}
-{% set number = '2' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/astropy/specutils
@@ -13,6 +13,7 @@ package:
     version: {{ version }}
 
 build:
+    noarch: python
     number: {{ number }}
 
 source:
@@ -22,22 +23,27 @@ source:
 requirements:
     build:
     - astropy
-    - cython
     - scipy
+    - gwcs
+    - six
     - setuptools
     - numpy {{ numpy }}
-    - python {{ python }}
+    - python >= 3
     run:
     - astropy
     - scipy
+    - gwcs
+    - six
     - numpy
-    - python
+    - python >= 3
 
 test:
     imports:
     - specutils
+    - specutils.analysis
+    - specutils.fitting
     - specutils.io
-    - specutils.models
+    - specutils.manipulation
+    - specutils.spectra
     - specutils.utils
     - specutils.wcs
-
