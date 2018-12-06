@@ -13,8 +13,8 @@ package:
     version: {{ version }}
 
 build:
-    noarch: python
     number: {{ number }}
+    skip: true # [py27]
 
 source:
     git_tag: {{ tag }}
@@ -28,14 +28,14 @@ requirements:
     - six
     - setuptools
     - numpy {{ numpy }}
-    - python >= 3
+    - python {{ python }}
     run:
     - astropy
     - scipy
     - gwcs
     - six
     - numpy
-    - python >= 3
+    - python
 
 test:
     imports:
