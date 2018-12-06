@@ -19,15 +19,14 @@ requirements:
     - asdf>=2.3.0
     - asteval>=0.9.13
     - astropy>=3.0.5
-    - Click>=7.0
+    - click>=7.0
     - gwcs>=0.9.1
-    - numpy>=1.15.4
-    - PyQt5>=5.11.3
+    - pyqt>=5.9
     - pyqtgraph>=0.10.0
     - pytest>=4.0.1
-    - PyYAML>=3.13
-    - QtAwesome>=0.5.3
-    - QtPy>=1.5.2
+    - pyyaml>=3.13
+    - qtawesome>=0.5.3
+    - qtpy>=1.5.2
     - scipy>=1.1.0
     - specutils>=0.5.1
     - numpy {{ numpy }}
@@ -37,18 +36,17 @@ requirements:
     - asdf>=2.3.0
     - asteval>=0.9.13
     - astropy>=3.0.5
-    - Click>=7.0
+    - click>=7.0
     - gwcs>=0.9.1
     - numpy>=1.15.4
-    - PyQt5>=5.11.3
+    - pyqt>=5.9
     - pyqtgraph>=0.10.0
     - pytest>=4.0.1
-    - PyYAML>=3.13
-    - QtAwesome>=0.5.3
-    - QtPy>=1.5.2
+    - pyyaml>=3.13
+    - qtawesome>=0.5.3
+    - qtpy>=1.5.2
     - scipy>=1.1.0
     - specutils>=0.5.1
-    - numpy
     - python
 
 test:
