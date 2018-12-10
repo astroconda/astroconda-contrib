@@ -1,0 +1,50 @@
+{% set name = 'tweakwcs' %}
+{% set version = '0.1' %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: A package for correcting alignment errors in WCS objects
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+    number: {{ number }}
+    skip: true  # [py27]
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
+requirements:
+    build:
+    - gwcs
+    - stsci.stimage
+    - stsci.imagestats
+    - spherical_geometry
+    - jwst
+    - astropy >=3.1
+    - setuptools
+    - numpy {{ numpy }}
+    - python {{ python }}
+
+    run:
+    - gwcs
+    - stsci.stimage
+    - stsci.imagestats
+    - spherical_geometry
+    - jwst
+    - astropy >=3.1
+    - numpy
+    - python
+
+test:
+    imports:
+    - tweakwcs
+    - tweakwcs.imalign
+    - tweakwcs.matchutils
+    - tweakwcs.tpwcs
+    - tweakwcs.wcsimage
