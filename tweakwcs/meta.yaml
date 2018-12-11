@@ -12,7 +12,7 @@ build:
     number: {{ number }}
     skip: true  # [py27]
 source:
-    git_tag: master
+    git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
 requirements:
     build:
