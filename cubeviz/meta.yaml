@@ -33,7 +33,8 @@ requirements:
     - glue-core >=0.13
     - numpy
     - pytest
-    - specviz >=0.5.0
+    - specviz <0.6.0
+    - spectral-cube >=0.4.2
     - python
 
 source:
