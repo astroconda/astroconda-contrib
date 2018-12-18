@@ -42,7 +42,7 @@ requirements:
 test:
   requires:
     - astropy
-    - specutils >0.5.1
+    - specutils >=0.5.1
     - specviz >=0.6.2
   imports:
     - mosviz
