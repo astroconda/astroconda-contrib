@@ -1,4 +1,4 @@
-{% set name = 'da5-notebooks' %}
+{% set name = 'da5_notebooks' %}
 {% set version = '1.0' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
