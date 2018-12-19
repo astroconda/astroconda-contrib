@@ -1,7 +1,7 @@
 {% set name = 'da5-notebooks' %}
 {% set version = '1.0' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
   home: https://github.com/spacetelscope/{{ name }}
