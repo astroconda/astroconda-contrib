@@ -1,6 +1,6 @@
 {% set name = 'gwcs' %}
-{% set version = '0.9.1' %}
-{% set number = '2' %}
+{% set version = '0.10.0' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -18,13 +18,13 @@ package:
 requirements:
     build:
     - asdf
-    - astropy >=2.0
+    - astropy >=3.1
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
     - asdf
-    - astropy >=2.0
+    - astropy >=3.1
     - numpy
     - python
 

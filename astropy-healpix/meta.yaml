@@ -1,5 +1,5 @@
 {% set name = 'astropy-healpix' %}
-{% set version = '0.2' %}
+{% set version = '0.3.1' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -19,7 +19,8 @@ requirements:
   build:
     - astropy
     - cython
-    - setuptools
+    - setuptools <38.5.1 [(py2k or py35 or py36) and osx]
+    - setuptools [(py37 and osx) or linux]
     - numpy {{ numpy }}
     - python {{ python }}
 

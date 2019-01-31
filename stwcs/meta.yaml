@@ -1,6 +1,6 @@
 {% set name = 'stwcs' %}
-{% set version = '1.4.0' %}
-{% set number = '1' %}
+{% set version = '1.4.2' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -18,7 +18,7 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=2.0.8
     - lxml
     - pytest
     - requests
@@ -27,7 +27,7 @@ requirements:
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=1.1
+    - astropy >=2.0.8
     - lxml
     - requests
     - stsci.tools

@@ -1,7 +1,7 @@
 {% set name = 'mosviz' %}
-{% set version = '0.1.1' %}
+{% set version = '0.2.0' %}
 {% set tag = 'v' + version %}
-{% set number = '1' %}
+{% set number = '0' %}
 
 about:
   home: https://github.com/spacetelescope/mosviz
@@ -25,22 +25,25 @@ requirements:
     - astropy
     - glue-core >=0.11.0
     - matplotlib >=1.5.3
-    - specutils <=0.2.2
+    - specutils >=0.5.1
     - numpy {{ numpy }}
     - python {{ python }}
+    - specviz >=0.6.2
 
   run:
     - astropy
     - glue-core >=0.11.0
     - matplotlib >=1.5.3
-    - specutils <=0.2.2
+    - specutils >=0.5.1
+    - specviz >=0.6.2
     - numpy
     - python
 
 test:
   requires:
     - astropy
-    - specutils <=0.2.2
+    - specutils >=0.5.1
+    - specviz >=0.6.2
   imports:
     - mosviz
 

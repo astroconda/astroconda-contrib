@@ -1,6 +1,6 @@
 {% set name = 'sphinxcontrib-programoutput' %}
-{% set version = '0.8' %}
-{% set number = '1' %}
+{% set version = '0.11' %}
+{% set number = '0' %}
 
 about:
     home: https://pypi.python.org/packages/source/s/{{ name }}
@@ -27,5 +27,5 @@ requirements:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    md5: bb0be17ef13f268378b2af51ff413c58
-    url: https://pypi.python.org/packages/source/s/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: cbec3ee1c3abd09e105115ab69cb5ade8ca1be9811565a844f973e93e0314837

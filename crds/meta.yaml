@@ -12,6 +12,7 @@ about:
 build:
     number: {{ number }}
     preserve_egg_dir: 'no'
+    skip: True [py2k]
 
 package:
     name: {{ name }}

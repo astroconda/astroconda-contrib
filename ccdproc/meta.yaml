@@ -1,7 +1,7 @@
 {% set name = 'ccdproc' %}
 {% set version = '1.3.0.post1' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
   home: http://ccdproc.readthedocs.io/
@@ -11,6 +11,8 @@ about:
 
 build:
   number: {{ number }}
+  # Astroscrappy req. incompatible with py37
+  skip: True [py37]
 
 package:
   name: {{ name }}

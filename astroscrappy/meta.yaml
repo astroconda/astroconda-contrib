@@ -1,7 +1,7 @@
 {% set name = 'astroscrappy' %}
 {% set version = '1.0.5' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
   home: https://github.com/astropy/astroscrappy
@@ -10,6 +10,8 @@ about:
 
 build:
   number: {{ number }}
+  # Incompatible C code
+  skip: True [py37]
 
 package:
   name: {{ name }}
@@ -18,8 +20,8 @@ package:
 requirements:
   build:
     - astropy
+    - setuptools <38.5.1
     - cython
-    - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
 

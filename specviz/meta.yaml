@@ -1,5 +1,5 @@
 {% set name = 'specviz' %}
-{% set version = '0.5.0' %}
+{% set version = '0.6.2' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -16,44 +16,43 @@ source:
 
 requirements:
   build:
-    - astropy
-    - cython
-    - docopt
-    - specutils <=0.2.2
-    - py-expression-eval
-    - pyyaml
-    - pyqtgraph >=0.9.11
-    - pyqt
-    - qtpy
-    - scipy
-    - spectral-cube
-    - yaml
-    - setuptools
-    - six
+    - asdf >=2.3.0
+    - asteval >=0.9.13
+    - astropy >=3.0.5
+    - click >=7.0
+    - gwcs >=0.9.1
+    - pyqt >=5.9
+    - pyqtgraph >=0.10.0
+    - pytest >=4.0.1
+    - pyyaml >=3.13
+    - qtawesome >=0.5.3
+    - qtpy >=1.5.2
+    - scipy >=1.1.0
+    - specutils >=0.5.1
     - numpy {{ numpy }}
     - python {{ python }}
 
   run:
-    - astropy
-    - cython
-    - docopt
-    - specutils <=0.2.2
-    - py-expression-eval
-    - pyyaml
-    - pyqtgraph >=0.9.11
-    - pyqt
-    - qtpy
-    - scipy
-    - spectral-cube
-    - yaml
-    - six
-    - numpy
+    - asdf >=2.3.0
+    - asteval >=0.9.13
+    - astropy >=3.0.5
+    - click >=7.0
+    - gwcs >=0.9.1
+    - numpy >=1.14
+    - pyqt >=5.9
+    - pyqtgraph >=0.10.0
+    - pytest >=4.0.1
+    - pyyaml >=3.13
+    - qtawesome >=0.5.3
+    - qtpy >=1.5.2
+    - scipy >=1.1.0
+    - specutils >=0.5.1
     - python
 
 test:
   requires:
-    - astropy
-    - specutils <=0.2.2
+    - astropy >=3.0.5
+    - specutils >=0.5.1
   imports:
     - specviz
 

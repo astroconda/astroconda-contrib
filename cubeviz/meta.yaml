@@ -1,6 +1,6 @@
 {% set name = 'cubeviz' %}
-{% set version = '0.2.0' %}
-{% set tag = version %}
+{% set version = '0.2.1' %}
+{% set tag = 'v' + version %}
 {% set number = '0' %}
 
 about:
@@ -33,11 +33,12 @@ requirements:
     - glue-core >=0.13
     - numpy
     - pytest
-    - specviz >=0.5.0
+    - specviz <0.6.0
+    - spectral-cube >=0.4.2
     - python
 
 source:
-    git_tag: {{ version }}
+    git_tag: {{ tag }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
 
 test:

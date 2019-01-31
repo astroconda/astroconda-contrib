@@ -9,4 +9,4 @@ do
     mv "${f}.new" "${f}"
 done
 
-$PYTHON setup.py install
+$PYTHON setup.py install --single-version-externally-managed --record=root.txt

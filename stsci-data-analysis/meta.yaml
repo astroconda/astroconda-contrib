@@ -1,5 +1,5 @@
 {% set name = 'stsci-data-analysis' %}
-{% set version = '2.1.1' %}
+{% set version = '3.0.0' %}
 {% set number = '0' %}
 
 about:
@@ -21,19 +21,17 @@ requirements:
 
     run:
       - asdf >=1.3.1
-      - astropy >=2.0.0
       - astroimtools >=0.1.1
-      - cubeviz >=0.0.2
-      - glueviz >=0.12.0
-      - glue-ginga >=0.2
-      - glue-vispy-viewers >=0.9
-      - gwcs >=0.8.0
+      #- cubeviz <=0.2.1  # Excluded due to spec(utils|viz). and mosviz conflicts
+      - da5-notebooks >=1.0.0
+      - gwcs >=0.9.1
       - mosviz >=0.1.1
-      - photutils >=0.4
-      - imexam >=0.8.0
-      - specutils >=0.2.2
-      - specviz >=0.4.4
-      - spherical-geometry >=1.0.12
+      - photutils >=0.6
+      - imexam >=0.8.1
+      - specutils >=0.2.2  # Constraint permits manual cubeviz install
+      - specviz >=0.5.0    # Constraint permits manual cubeviz install
+      - spherical-geometry >=1.2.6
       - stginga >=0.2.1
-      - numpy
+      - tweakwcs >=0.1.1
+      - webbpsf >=0.8.0
       - python

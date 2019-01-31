@@ -1,7 +1,7 @@
 {% set name = 'reproject' %}
 {% set version = '0.4' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '2' %}
 
 about:
   home: http://reproject.readthedocs.io/
@@ -18,17 +18,18 @@ package:
 
 requirements:
   build:
-    - astropy >=1.0
-    - astropy-healpix
+    - astropy >=2.0
+    - astropy-healpix >=0.2
     - cython
     - scipy >=0.9
-    - setuptools <38.5.1
+    - setuptools <38.5.1 [(py2k or py35 or py36) and osx]
+    - setuptools [(py37 and osx) or linux]
     - numpy {{ numpy }}
     - python {{ python }}
 
   run:
-    - astropy >=1.0
-    - astropy-healpix
+    - astropy >=2.0
+    - astropy-healpix >=0.2
     - scipy >=0.9
     - numpy
     - python

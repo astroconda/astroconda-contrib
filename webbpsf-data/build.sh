@@ -1,8 +1,15 @@
-
 mkdir -p $PREFIX/share
 mkdir -p $PREFIX/etc/conda/activate.d
 mkdir -p $PREFIX/etc/conda/deactivate.d
-cp -a `pwd` $PREFIX/share/webbpsf-data
+
+# Different conda-build releases do different things
+# SRC_DIR is "usedir" for all intents and purposes
+usedir="$(pwd)"
+if [[ -d ${usedir}/work ]]; then
+    usedir=${usedir}/work
+fi
+
+rsync -a ${usedir}/* $PREFIX/share/webbpsf-data
 
 echo "
 export WEBBPSF_PATH=$PREFIX/share/webbpsf-data

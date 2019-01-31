@@ -1,0 +1,20 @@
+{% set name = 'da5-notebooks' %}
+{% set version = '1.0' %}
+{% set tag = 'v' + version %}
+{% set number = '1' %}
+
+about:
+  home: https://github.com/spacetelscope/{{ name }}
+  license: BSD
+  summary: Collection of data analysis notebooks
+
+build:
+  number: {{ number }}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_tag: {{ tag }}
+  git_url: https://github.com/spacetelescope/{{ name }}.git
