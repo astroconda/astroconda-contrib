@@ -6,7 +6,7 @@ about:
     home: https://github.com/karllark/{{ name }}
     license: BSD
     summary: |
-        Provides models of interstellar dust extinction curves
+        Models of interstellar dust extinction curves
 
 build:
     number: {{ number }}
@@ -17,13 +17,13 @@ package:
 
 requirements:
     build:
-    - astropy >=1.3
+    - astropy >=2
     - pytest
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=1.3
+    - astropy >=2
     - matplotlib
     - scipy
     - numpy
