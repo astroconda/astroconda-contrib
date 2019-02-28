@@ -1,5 +1,5 @@
 {% set name = 'acstools' %}
-{% set version = '2.1.0' %}
+{% set version = '3.0.0' %}
 {% set number = '0' %}
 
 about:
@@ -8,18 +8,19 @@ about:
     summary: Python tools for analyzing ACS data
 build:
     number: {{ number }}
+    skip: true  # [py2k]   
 package:
     name: {{ name }}
     version: {{ version }}
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=2
     - stsci.tools
     - numpy {{ numpy }}
     - setuptools
     - python {{ python }}
     run:
-    - astropy >=1.1
+    - astropy >=2
     - scikit-image
     - stsci.tools
     - matplotlib
