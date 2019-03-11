@@ -1,5 +1,5 @@
 {% set name = 'drizzle' %}
-{% set version = '1.5' %}
+{% set version = '1.12' %}
 {% set number = '1' %}
 
 about:
