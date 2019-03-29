@@ -1,5 +1,5 @@
 {% set name = 'cubeviz' %}
-{% set version = '0.2.1' %}
+{% set version = '0.3' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -20,8 +20,8 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core >=0.13
-    - numpy {{ numpy }}
+    - glue-core >=0.14
+    - numpy >= 1.13
     - pytest
     - setuptools
     - python {{ python }}
@@ -30,12 +30,13 @@ requirements:
     - asdf
     - asteval
     - astropy
-    - glue-core >=0.13
-    - numpy
+    - glue-core >=0.14
+    - numpy >= 1.13
     - pytest
-    - specviz <0.6.0
-    - spectral-cube >=0.4.2
+    - specviz >=0.7.0
+    - spectral-cube >=0.4.4
     - python
+    - pyqt5 < 5.12
 
 source:
     git_tag: {{ tag }}
