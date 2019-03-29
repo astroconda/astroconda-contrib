@@ -1,6 +1,6 @@
 {% set name = 'mosviz' %}
-{% set version = '0.2.0' %}
-{% set tag = 'v' + version %}
+{% set version = '0.3.0' %}
+{% set tag = version %}
 {% set number = '0' %}
 
 about:
