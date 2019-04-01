@@ -21,7 +21,7 @@ requirements:
     - asteval
     - astropy
     - glue-core >=0.14
-    - numpy >= 1.13
+    - numpy {{ numpy }}
     - pytest
     - setuptools
     - python {{ python }}
