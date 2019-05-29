@@ -1,5 +1,5 @@
 {% set name = 'stsci-hst' %}
-{% set version = '3.1.0' %}
+{% set version = '3.1.1' %}
 {% set number = '0' %}
 
 about:
@@ -39,7 +39,6 @@ requirements:
       - stsci.imagemanip >=1.1.2
       - stsci.imagestats >=1.4.1
       - stsci.ndimage >=0.10.1
-      - stsci.sphinxext >=1.2.2
       - stsci.stimage >=0.2.1
       - stsci.skypac >=0.9.5
       - stsci.tools >=3.4.11
