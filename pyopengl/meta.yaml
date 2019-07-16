@@ -4,7 +4,7 @@
 {% set number = '0' %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "e687eea7e006d65f531933b49b3b3d2feaaf51279147a904247f9d189762a36f" %}
+{% set hash_value = "85cd5372636b8bda173a261b0d572500b2a3432105eaad1311ecd61b372bd6e8" %}
 
 about:
   home: http://pyopengl.sourceforge.net
