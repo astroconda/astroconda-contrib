@@ -1,10 +1,10 @@
 {% set badname = "PyOpenGL" %}
 {% set name = badname|lower %}
-{% set version = "3.1.1a1" %}
+{% set version = "3.1.3b1" %}
 {% set number = '0' %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "c96d909b359abe3271b746bacf7e6ba52935141e2406a8f90231e4e44dfa4075" %}
+{% set hash_value = "e687eea7e006d65f531933b49b3b3d2feaaf51279147a904247f9d189762a36f" %}
 
 about:
   home: http://pyopengl.sourceforge.net
