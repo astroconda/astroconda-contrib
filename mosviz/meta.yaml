@@ -29,6 +29,7 @@ requirements:
     - numpy {{ numpy }}
     - python {{ python }}
     - specviz >=0.6.2
+    - setuptools_scm
 
   run:
     - astropy
