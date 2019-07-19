@@ -36,7 +36,7 @@ requirements:
     - specviz >=0.7.0
     - spectral-cube <0.4.4
     - python
-    - pyqt5 <5.12
+    - pyqt <5.12
 
 source:
     git_tag: {{ version }}
