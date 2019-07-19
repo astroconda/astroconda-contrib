@@ -23,6 +23,7 @@ requirements:
     - numpy {{ numpy }}
     - pytest
     - setuptools
+    - setuptools_scm
     - python {{ python }}
 
     run:
