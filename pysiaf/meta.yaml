@@ -1,5 +1,5 @@
 {% set name = 'pysiaf' %}
-{% set version = '0.1.8' %}
+{% set version = '0.4.0' %}
 {% set tag = version %}
 {% set number = '0' %}
 
@@ -30,6 +30,7 @@ requirements:
     - openpyxl >=2.4
     - python {{ python }}
     - setuptools
+    - numpydoc
     
     run:
     - astropy >=1.2
