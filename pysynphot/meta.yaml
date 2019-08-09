@@ -1,5 +1,5 @@
 {% set name = 'pysynphot' %}
-{% set version = '0.9.12' %}
+{% set version = '0.9.13' %}
 {% set number = '0' %}
 
 about:
