@@ -17,6 +17,7 @@ requirements:
     - numpy {{ numpy }}
     - pytest
     - python {{ python }}
+    - setuptools_scm
     - setuptools
     run:
     - astropy >=1.1
