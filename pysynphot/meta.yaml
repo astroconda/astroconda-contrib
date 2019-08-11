@@ -14,16 +14,20 @@ package:
 requirements:
     build:
     - astropy >=1.1
+    - beautifulsoup4
     - numpy {{ numpy }}
     - pytest
     - python {{ python }}
     - setuptools_scm
     - setuptools
+    - six
     run:
     - astropy >=1.1
+    - beautifulsoup4
     - numpy
     - pytest
     - python
+    - six
 source:
     git_tag: {{ version }}
     git_url: https://github.com/spacetelescope/{{ name }}.git
