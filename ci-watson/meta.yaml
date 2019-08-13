@@ -1,6 +1,6 @@
 {% set name = 'ci-watson' %}
 {% set reponame = 'ci_watson' %}
-{% set version = '0.3' %}
+{% set version = '0.4' %}
 {% set number = '0' %}
 
 about:
