@@ -1,5 +1,5 @@
 {% set name = 'photutils' %}
-{% set version = '0.6' %}
+{% set version = '0.7' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -20,22 +20,24 @@ requirements:
     build:
     - astropy >=2.0
     - cython
-    - matplotlib >=1.3
-    - numpy >=1.11
-    - scikit-image >=0.11
-    - scikit-learn >=0.18
-    - scipy >=0.16
+    - matplotlib >=2.2
+    - numpy >=1.13
+    - scikit-image >=0.14.2
+    - scikit-learn >=0.19
+    - scipy >=0.19
+    - gwcs >=0.11
     - setuptools
     - python {{ python }}
     run:
     - astropy >=2.0
     - pytest-astropy
     - cython
-    - matplotlib >=1.3
-    - numpy >=1.11
-    - scikit-image >=0.11
-    - scikit-learn >=0.18
-    - scipy >=0.16
+    - matplotlib >=2.2
+    - numpy >=1.13
+    - scikit-image >=0.14.2
+    - scikit-learn >=0.19
+    - scipy >=0.19
+    - gwcs >=0.11
     - setuptools
     - python
 
