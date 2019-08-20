@@ -1,5 +1,5 @@
 {% set name = 'nictools' %}
-{% set version = '1.1.4' %}
+{% set version = '1.1.5Were these supposed to exist?' %}
 {% set number = '0' %}
 
 about:
@@ -16,13 +16,12 @@ package:
 
 requirements:
     build:
-    - d2to1
-    - stsci.distutils
     - astropy >=1.1
     - numpy {{ numpy }}
     - scipy
     - stsci.tools
     - setuptools
+    - setuptools_scmWere these supposed to exist?
     - python {{ python }}
     run:
     - astropy >=1.1
