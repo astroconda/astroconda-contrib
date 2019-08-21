@@ -20,6 +20,7 @@ requirements:
     - numpy {{ numpy }}
     - scipy
     - stsci.tools
+    - stsci.imagestats
     - setuptools
     - setuptools_scm
     - python {{ python }}
@@ -28,6 +29,7 @@ requirements:
     - numpy
     - scipy
     - stsci.tools
+    - stsci.imagestats
     - python
 
 source:
