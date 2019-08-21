@@ -1,5 +1,5 @@
 {% set name = 'stregion' %}
-{% set version = '1.1.4' %}
+{% set version = '1.1.6astroconda-contrib/issues/489' %}
 {% set number = '0' %}
 
 about:
