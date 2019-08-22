@@ -1,6 +1,6 @@
 {% set name = 'stsci.stimage' %}
-{% set version = '0.2.2' %}
-{% set number = '1' %}
+{% set version = '0.2.4' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -16,10 +16,9 @@ package:
 
 requirements:
     build:
-      - d2to1
       - numpy {{ numpy }}
-      - stsci.distutils
       - setuptools
+      - setuptools_scm
       - python {{ python }}
     run:
       - numpy
