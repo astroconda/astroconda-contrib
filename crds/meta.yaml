@@ -1,5 +1,5 @@
 {% set name = 'crds' %}
-{% set version = '7.3.4' %}
+{% set version = '7.4.1' %}
 {% set number = '0' %}
 
 about:
@@ -31,7 +31,7 @@ requirements:
     - lockfile
     - setuptools
     - python {{ python }}
-    - asdf    
+    - asdf
 
     run:
     - astropy >=1.1
