@@ -1,5 +1,5 @@
 {% set name = 'stwcs' %}
-{% set version = '1.5.1' %}
+{% set version = '1.5.3' %}
 {% set number = '0' %}
 
 about:
@@ -18,19 +18,19 @@ package:
 
 requirements:
     build:
-    - astropy >=2.0.8
+    - astropy
     - lxml
     - pytest
     - requests
-    - stsci.tools
+    - stsci.tools >= 3.6
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=2.0.8
+    - astropy
     - lxml
     - requests
-    - stsci.tools
+    - stsci.tools >=3.6
     - numpy
     - python
 
