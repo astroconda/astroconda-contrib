@@ -1,5 +1,5 @@
 {% set name = 'asdf' %}
-{% set version = '2.3.3' %}
+{% set version = '2.4.0' %}
 {% set number = '0' %}
 
 about:
@@ -19,18 +19,20 @@ requirements:
     build:
     - semantic_version >=2.3.1
     - pyyaml >=3.10
-    - jsonschema >=2.3,<=2.6
+    - jsonschema >=2.3,<4.0
     - six >=1.9.0
     - setuptools
+    - setuptools_scm
     - numpy {{ numpy }}
     - python {{ python }}
     run:
     - semantic_version >=2.3.1
     - pyyaml >=3.10
-    - jsonschema >=2.3,<=2.6
+    - jsonschema >=2.3,<4.0
     - pytest
     - six >=1.9.0
     - setuptools
+    - setuptools_scm
     - numpy
     - python
 

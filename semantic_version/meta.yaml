@@ -1,0 +1,38 @@
+{% set name = "semantic_version" %}
+{% set version = "2.8.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "71c716e99086c44d068262b86e4775aa6db7fabee0743e4e33b00fbf6f672585"
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - semantic_version
+
+about:
+  home: "https://github.com/rbarrois/python-semanticversion"
+  license: "BSD"
+  license_family: "BSD"
+  license_file: ""
+  summary: "A library implementing the 'SemVer' scheme."
+  doc_url: ""
+  dev_url: ""
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
