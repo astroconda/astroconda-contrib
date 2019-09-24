@@ -1,5 +1,5 @@
 {% set name = 'ginga' %}
-{% set version = '2.7.2' %}
+{% set version = '3.0.1' %}
 {% set tag = 'v' ~ version %}
 {% set number = '0' %}
 
@@ -10,6 +10,7 @@ about:
 
 build:
     number: {{ number }}
+    skip: true  # [py2k]
 
 package:
     name: {{ name }}
@@ -17,14 +18,14 @@ package:
 
 requirements:
     build:
-    - astropy >=1.2
+    - astropy >=3
     - qtpy
     - pillow
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=1.2
+    - astropy >=3
     - qtpy
     - pillow
     - numpy
