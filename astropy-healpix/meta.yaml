@@ -6,7 +6,7 @@
 about:
   home: http://astropy-healpix.readthedocs.io/
   license: BSD
-  summary: Speedy Cosmic Ray Annihilation Package in Python
+  summary: A Python package for HEALPix
 
 build:
   number: {{ number }}
