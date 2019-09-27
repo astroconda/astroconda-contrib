@@ -1,7 +1,7 @@
 {% set name = 'astropy-healpix' %}
 {% set version = '0.3.1' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
   home: http://astropy-healpix.readthedocs.io/
