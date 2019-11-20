@@ -10,7 +10,8 @@ about:
 
 build:
     number: {{ number }}
-
+    skip: true  # [py2k]
+    
 package:
     name: {{ name }}
     version: {{ version }}
