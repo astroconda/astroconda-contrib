@@ -30,6 +30,7 @@ requirements:
     - synphot >=0.2
     - astropy >=2.0
     - scipy >=0.14
+    - beautifulsoup4
     - numpy
     - pytest
     - python
