@@ -1,5 +1,5 @@
 {% set name = 'drizzlepac' %}
-{% set version = '3.0.2' %}
+{% set version = '3.1.3' %}
 {% set number = '0' %}
 
 about:
@@ -37,7 +37,6 @@ requirements:
     - pysynphot
     - tweakwcs
     - numpy {{ numpy }}
-    #- numpy
     - python {{ python }}
     run:
     - acstools
