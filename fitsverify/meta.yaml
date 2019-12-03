@@ -1,11 +1,12 @@
 {% set name = 'fitsverify' %}
 {% set version = '4.18' %}
-{% set number = '6' %}
+{% set number = '7' %}
 # number = 1 ; legacy, links against whatever is provided by available cfitsio package
 # number = 2 ; links against cfitsio < 3.410
 # number = 3 ; links against cfitsio >= 3.410
 # number = 5 ; links against cfitsio >= 3.440
 # number = 6 ; links against cfitsio >= 3.440 (no curl)
+# number = 7 ; links against cfitsio > 3.440 (now provided by conda)
 
 about:
     home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
@@ -24,11 +25,11 @@ package:
 
 requirements:
     build:
-    - cfitsio >=3.440
+    - cfitsio >3.440
     - pkg-config [osx]
 
     run:
-    - cfitsio >=3.440
+    - cfitsio >3.440
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
