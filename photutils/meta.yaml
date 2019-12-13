@@ -1,5 +1,5 @@
 {% set name = 'photutils' %}
-{% set version = '0.7.1' %}
+{% set version = '0.7.2' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -18,7 +18,7 @@ package:
 
 requirements:
     build:
-    - astropy >=2.0
+    - astropy >=2.0.12,!=3.0.*,!=3.1,!=3.1.1
     - cython
     - matplotlib >=2.2
     - numpy >=1.13
@@ -29,7 +29,7 @@ requirements:
     - setuptools
     - python {{ python }}
     run:
-    - astropy >=2.0
+    - astropy >=2.0.12,!=3.0.*,!=3.1,!=3.1.1
     - pytest-astropy
     - cython
     - matplotlib >=2.2

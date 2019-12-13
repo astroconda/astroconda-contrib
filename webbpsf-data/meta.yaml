@@ -1,6 +1,6 @@
 {% set name = 'webbpsf-data' %}
-{% set version = '0.8.0' %}
-{% set number = '0' %}
+{% set version = '0.9.0' %}
+{% set number = '1' %}
 
 about:
     home: https://webbpsf.readthedocs.io
@@ -16,4 +16,4 @@ package:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    url: http://www.stsci.edu/~mperrin/software/webbpsf/{{ name }}-{{ version }}.tar.gz
+    url: https://stsci.box.com/shared/static/qcptcokkbx7fgi3c00w2732yezkxzb99.gz

@@ -1,6 +1,6 @@
 {% set reponame = 'stsynphot_refactor' %}
 {% set name = 'stsynphot' %}
-{% set version = '0.1.1' %}
+{% set version = '0.2.0' %}
 {% set number = '0' %}
 
 about:
@@ -10,6 +10,7 @@ about:
 
 build:
     number: {{ number }}
+    skip: true  # [py2k]
 
 package:
     name: {{ name }}
@@ -17,18 +18,20 @@ package:
 
 requirements:
     build:
-    - synphot >=0.1
-    - astropy >=1.3
+    - synphot >=0.2
+    - astropy >=2.0
     - scipy >=0.14
+    - beautifulsoup4
     - numpy {{ numpy }}
     - pytest
     - setuptools
     - python {{ python }}
 
     run:
-    - synphot >=0.1
-    - astropy >=1.3
+    - synphot >=0.2
+    - astropy >=2.0
     - scipy >=0.14
+    - beautifulsoup4
     - numpy
     - pytest
     - python
