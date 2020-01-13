@@ -19,6 +19,7 @@ package:
 requirements:
     build:
     - astropy >=2.0
+    - extension-helpers
     - scipy >=0.14
     - numpy {{ numpy }}
     - pytest

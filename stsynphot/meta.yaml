@@ -1,7 +1,7 @@
 {% set reponame = 'stsynphot_refactor' %}
 {% set name = 'stsynphot' %}
 {% set version = '0.2.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ reponame }}
@@ -20,6 +20,7 @@ requirements:
     build:
     - synphot >=0.2
     - astropy >=2.0
+    - extension-helpers
     - scipy >=0.14
     - beautifulsoup4
     - numpy {{ numpy }}
