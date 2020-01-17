@@ -18,7 +18,10 @@ requirements:
     build:
       - cfitsio >=3.440
       - pkg-config
-      - gcc >=4.7
+      - gcc_linux-64 [linux]
+      - gfortran_linux-64 [linux]
+      # OS-provided compilers and macos SDK used.
+      # The conda toolchains do not work on macos.
 
     run:
       - cfitsio
