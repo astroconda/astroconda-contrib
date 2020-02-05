@@ -26,6 +26,7 @@ requirements:
     - keyring
     - beautifulsoup4
     - html5lib
+    - secretstorage [linux]
     - six
     - setuptools
     - python {{ python }}
@@ -36,6 +37,7 @@ requirements:
     - keyring
     - beautifulsoup4
     - html5lib
+    - secretstorage [linux]
     - six
     - python
 
