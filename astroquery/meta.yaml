@@ -1,5 +1,5 @@
 {% set name = 'astroquery' %}
-{% set version = '0.3.10' %}
+{% set version = '0.4' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -26,7 +26,6 @@ requirements:
     - keyring
     - beautifulsoup4
     - html5lib
-    - secretstorage [linux]
     - six
     - setuptools
     - python {{ python }}
@@ -37,7 +36,6 @@ requirements:
     - keyring
     - beautifulsoup4
     - html5lib
-    - secretstorage [linux]
     - six
     - python
 
