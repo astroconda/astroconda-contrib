@@ -1,7 +1,7 @@
 {% set name = 'ci-watson' %}
 {% set reponame = 'ci_watson' %}
-{% set version = '0.4' %}
-{% set number = '1' %}
+{% set version = '0.5' %}
+{% set number = '0' %}
 
 about:
     home: https://github.com/spacetelescope/{{ reponame }}
@@ -20,6 +20,7 @@ requirements:
     build:
     - pytest
     - setuptools
+    - setuptools_scm
     - atomicwrites
     - python {{ python }}
     run:

@@ -1,7 +1,7 @@
 {% set reponame = 'synphot_refactor' %}
 {% set name = 'synphot' %}
 {% set version = '0.2.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ reponame }}
@@ -18,7 +18,9 @@ package:
 
 requirements:
     build:
+    - setuptools_scm
     - astropy >=2.0
+    - extension-helpers
     - scipy >=0.14
     - numpy {{ numpy }}
     - pytest

@@ -1,5 +1,5 @@
 {% set name = 'drizzlepac' %}
-{% set version = '3.1.3' %}
+{% set version = '3.1.5' %}
 {% set number = '0' %}
 
 about:
@@ -21,10 +21,12 @@ requirements:
     - astroquery
     - fitsblender
     - graphviz
+    - jeepney
     - lxml
     - nictools
     - nose
     - scipy
+    - secretstorage [linux]
     - spherical-geometry
     - stsci.image
     - stsci.imagestats
@@ -45,8 +47,10 @@ requirements:
     - fitsblender
     - nictools
     - nose
+    - jeepney
     - lxml
     - scipy
+    - secretstorage [linux]
     - spherical-geometry
     - stsci.image
     - stsci.imagestats
