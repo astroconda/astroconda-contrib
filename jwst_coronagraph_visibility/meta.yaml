@@ -1,5 +1,5 @@
 {% set name = 'jwst_coronagraph_visibility' %}
-{% set version = '0.4.2' %}
+{% set version = '0.4.4' %}
 {% set number = '1' %}
 {% set org = 'spacetelescope' %}
 
@@ -30,18 +30,18 @@ requirements:
     - numpydoc
     - python {{ python }}
     - numpy {{ numpy }}
-    - matplotlib>=2.2.4
+    - matplotlib>=3.1.3
     - tk
     - requests
-    - pysiaf >=0.6.3
+    - pysiaf>=0.7.1
     run:
     - numpydoc
     - python
     - numpy
-    - matplotlib
+    - matplotlib>=3.1.3
     - requests
     - tk
-    - pysiaf >=0.6.3
+    - pysiaf>=0.7.1
 
 test:
    imports:
