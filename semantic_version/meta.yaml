@@ -1,4 +1,4 @@
-{% set name = "semantic-version" %}
+{% set name = "semantic_version" %}
 {% set version = "2.8.4" %}
 
 package:
