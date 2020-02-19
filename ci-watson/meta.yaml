@@ -18,7 +18,8 @@ package:
 
 requirements:
     build:
-    - pytest
+    - pytest >=3
+    - requests
     - setuptools
     - setuptools_scm
     - atomicwrites
