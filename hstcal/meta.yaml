@@ -16,6 +16,7 @@ package:
 
 requirements:
     build:
+      - python {{ python }}
       - cfitsio >=3.440
       - pkg-config
       - gcc_linux-64 [linux]
