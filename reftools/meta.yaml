@@ -1,5 +1,5 @@
 {% set name = 'reftools' %}
-{% set version = '1.7.5' %}
+{% set version = '1.7.6' %}
 {% set number = '0' %}
 
 about:
@@ -16,12 +16,13 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=2
     - numpy {{ numpy }}
     - python {{ python }}
+    - setuptools_scm
     - setuptools
     run:
-    - astropy >=1.1
+    - astropy >=2
     - numpy
     - python
 
