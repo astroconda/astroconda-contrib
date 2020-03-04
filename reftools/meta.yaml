@@ -1,5 +1,5 @@
 {% set name = 'reftools' %}
-{% set version = '1.7.5' %}
+{% set version = '2.0.0' %}
 {% set number = '0' %}
 
 about:
@@ -9,6 +9,7 @@ about:
 
 build:
     number: {{ number }}
+    skip: true  # [py2k]
 
 package:
     name: {{ name }}
@@ -16,12 +17,13 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=3
     - numpy {{ numpy }}
     - python {{ python }}
+    - setuptools_scm
     - setuptools
     run:
-    - astropy >=1.1
+    - astropy >=3
     - numpy
     - python
 
