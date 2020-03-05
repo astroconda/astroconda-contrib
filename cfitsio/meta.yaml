@@ -29,5 +29,5 @@ source:
       - 0001-cfitsio-autoconf-disable-curl.patch
 
     fn: {{ name }}{{ version_short }}.tar.gz
-    url: http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/{{ name }}{{ version_short }}.tar.gz
+    url: http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-3.47.tar.gz
     #md5: 8c9b3383752f1bd663b936c297f19feb # verification broken in conda-build through 3.7.1
