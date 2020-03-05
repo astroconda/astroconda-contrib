@@ -1,6 +1,6 @@
 {% set name = 'hstcal' %}
 {% set version = '2.3.1' %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

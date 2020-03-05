@@ -1,6 +1,6 @@
 {% set name = 'fitsverify' %}
 {% set version = '4.18' %}
-{% set number = '8' %}
+{% set number = '9' %}
 # number = 1 ; legacy, links against whatever is provided by available cfitsio package
 # number = 2 ; links against cfitsio < 3.410
 # number = 3 ; links against cfitsio >= 3.410
