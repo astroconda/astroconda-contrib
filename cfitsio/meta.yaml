@@ -1,7 +1,7 @@
 {% set name = 'cfitsio' %}
-{% set version = '3.440' %}
-{% set version_short = '3440' %}
-{% set number = '1' %}
+{% set version = '3.470' %}
+{% set version_short = '3470' %}
+{% set number = '0' %}
 
 about:
     home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
