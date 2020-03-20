@@ -46,4 +46,3 @@ test:
     - specutils.manipulation
     - specutils.spectra
     - specutils.utils
-    - specutils.wcs
