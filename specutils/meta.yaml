@@ -22,6 +22,7 @@ source:
 
 requirements:
     build:
+    - asdf
     - astropy
     - scipy
     - gwcs
@@ -30,6 +31,7 @@ requirements:
     - numpy {{ numpy }}
     - python {{ python }}
     run:
+    - asdf
     - astropy
     - scipy
     - gwcs
