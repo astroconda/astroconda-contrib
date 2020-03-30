@@ -1,0 +1,20 @@
+{% set name = 'jdat_notebooks' %}
+{% set version = '' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
+
+about:
+  home: https://github.com/spacetelscope/{{ name }}
+  license: BSD
+  summary: Collection of JWST Data Analysis Tools notebooks
+
+build:
+  number: {{ number }}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_tag: {{ tag }}
+  git_url: https://github.com/spacetelescope/{{ name }}.git
