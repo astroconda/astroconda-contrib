@@ -1,5 +1,5 @@
 {% set name = 'imexam' %}
-{% set version = '0.8.1' %}
+{% set version = '0.9.0' %}
 {% set number = '0' %}
 
 about:
@@ -21,21 +21,17 @@ package:
 
 requirements:
     build:
-    - astropy >=1.3
     - cython
-    - pytest
     - setuptools
-    - numpy {{ numpy }}
+    - setuptools_scm
     - python {{ python }}
     run:
-    - astropy >=1.3
+    - astropy >=3.0
     - cython
     - ginga
-    - ipython
-    - notebook
     - photutils
     - matplotlib
-    - scipy
+    - scipy >=0.18
     - numpy
     - python
 
