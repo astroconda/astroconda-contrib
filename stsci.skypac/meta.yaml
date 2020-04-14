@@ -23,8 +23,10 @@ requirements:
     - stsci.tools
     - stwcs
     - setuptools
+    - setuptools_scm
     - numpy {{ numpy }}
     - python {{ python }}
+    - pytest-runner
     run:
     - astropy >=3.1
     - stsci.imagestats
