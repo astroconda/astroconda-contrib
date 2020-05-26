@@ -1,6 +1,6 @@
 {% set name = 'ds9' %}
 {% set version = '8.0.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://ds9.si.edu/download/source/
@@ -17,9 +17,12 @@ package:
 
 requirements:
     build:
-    - gcc >=4.6 [osx]
-    - autoconf
-    - m4
+      - gcc >=4.6 [osx]
+      - autoconf
+      - m4
+      - openssl >=1.1
+    run:
+      - openssl >=1.1
 
 source:
     fn: {{ name }}.{{ version }}.tar.gz
