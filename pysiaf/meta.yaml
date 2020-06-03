@@ -1,5 +1,5 @@
 {% set name = 'pysiaf' %}
-{% set version = '0.7.1' %}
+{% set version = '0.8.0' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -22,6 +22,7 @@ build:
 
 requirements:
     build:
+    - setuptools
     - astropy >=1.2
     - numpy >=1.13
     - matplotlib >=3.0.0
@@ -33,8 +34,10 @@ requirements:
     - numpydoc
     - requests >=2.21.0
     - PyQt >=5.0.0
+    - et-xmlfile
 
     run:
+    - setuptools
     - astropy >=1.2
     - numpy >=1.9
     - matplotlib >=1.4.3
@@ -44,6 +47,7 @@ requirements:
     - python {{ python }}
     - requests >=2.21.0
     - PyQt >=5.0.0
+    - et-xmlfile
 
 test:
     imports:
