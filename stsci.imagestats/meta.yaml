@@ -28,6 +28,7 @@ requirements:
 
 source:
     git_url: https://github.com/spacetelescope/{{ name }}.git
+    git_tag: {{ version }}
 
 test:
     imports:
