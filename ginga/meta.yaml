@@ -1,5 +1,5 @@
 {% set name = 'ginga' %}
-{% set version = '3.0.1' %}
+{% set version = '3.1.0' %}
 {% set tag = 'v' ~ version %}
 {% set number = '0' %}
 
@@ -22,6 +22,7 @@ requirements:
     - qtpy
     - pillow
     - setuptools
+    - setuptools_scm
     - numpy {{ numpy }}
     - python {{ python }}
     run:
