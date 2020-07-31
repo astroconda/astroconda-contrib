@@ -1,6 +1,6 @@
 {% set reponame = 'stsynphot_refactor' %}
 {% set name = 'stsynphot' %}
-{% set version = '0.3' %}
+{% set version = '1.0.0' %}
 {% set number = '0' %}
 
 about:
@@ -18,7 +18,7 @@ package:
 
 requirements:
     build:
-    - synphot >=0.2
+    - synphot >=0.3
     - astropy >=3
     - extension-helpers
     - scipy >=0.14
@@ -30,7 +30,7 @@ requirements:
     - python {{ python }}
 
     run:
-    - synphot >=0.2
+    - synphot >=0.3
     - astropy >=3
     - scipy >=0.14
     - beautifulsoup4
