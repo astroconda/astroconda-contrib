@@ -1,6 +1,6 @@
 {% set reponame = 'synphot_refactor' %}
 {% set name = 'synphot' %}
-{% set version = '1.0.0' %}
+{% set version = '1.0.1' %}
 {% set number = '0' %}
 
 about:
