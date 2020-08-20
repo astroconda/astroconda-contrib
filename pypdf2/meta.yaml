@@ -1,0 +1,36 @@
+{% set name = "PyPDF2" %}
+{% set version = "1.26.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e28f902f2f0a1603ea95ebe21dff311ef09be3d0f0ef29a3e44a932729564385
+
+build:
+  noarch: python
+  number: 2
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vv"
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+test:
+  imports:
+    - PyPDF2
+
+about:
+  home: http://mstamy2.github.com/PyPDF2
+  license: BSD-3-Clause
+  # LICENSE not in MANIFEST.in - see https://github.com/mstamy2/PyPDF2/pull/288
+  license_file: LICENSE
+  license_family: BSD
+  summary: 'A utility to read and write PDFs with Python'
+  doc_url: http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html
+  dev_url: https://github.com/mstamy2/PyPDF2/
