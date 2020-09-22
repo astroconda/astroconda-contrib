@@ -33,7 +33,7 @@ requirements:
     - python
 
 source:
-    git_rev: c1bf67ab195bd7eb0c662755c2df35df014482b0
+    git_rev: f1f0aae83c9d5da05b457f72501ec127f787c0f4
     git_url: https://github.com/ericmandel/{{ name }}.git
 
 test:
