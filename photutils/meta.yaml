@@ -1,50 +1,47 @@
 {% set name = 'photutils' %}
-{% set version = '0.7.2' %}
-{% set tag = 'v' + version %}
+{% set version = '1.0.1' %}
+{% set tag = version %}
 {% set number = '0' %}
 
 about:
-    home: https://github.com/astropy/{{ name }}
-    license: BSD
-    summary: An Astropy package for photometry
+  home: https://github.com/astropy/{{ name }}
+  license: BSD
+  summary: An Astropy package for photometry
 
 build:
-    number: {{ number }}
-    skip: True [py27]
+  number: {{ number }}
+  skip: True [py27]
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 requirements:
-    build:
-    - astropy >=2.0.12,!=3.0.*,!=3.1,!=3.1.1
+  build:
     - cython
-    - matplotlib >=2.2
-    - numpy >=1.13
-    - scikit-image >=0.14.2
-    - scikit-learn >=0.19
-    - scipy >=0.19
-    - gwcs >=0.11
+    - extension-helpers
     - setuptools
+    - setuptools_scm
+    - numpy {{ numpy }}
     - python {{ python }}
-    run:
-    - astropy >=2.0.12,!=3.0.*,!=3.1,!=3.1.1
+    - astropy >=4.0
+  run:
+    - python
+    - astropy >=4.0
     - pytest-astropy
-    - cython
+    - gwcs >=0.12
     - matplotlib >=2.2
-    - numpy >=1.13
+    - numpy >=1.17
     - scikit-image >=0.14.2
     - scikit-learn >=0.19
     - scipy >=0.19
-    - gwcs >=0.11
-    - setuptools
-    - python
 
 source:
-    git_tag: {{ tag }}
-    git_url: https://github.com/astropy/{{ name }}.git
+  git_tag: {{ tag }}
+  git_url: https://github.com/astropy/{{ name }}.git
 
 test:
-    imports:
+  requires:
+    - pytest-astropy
+  imports:
     - photutils
