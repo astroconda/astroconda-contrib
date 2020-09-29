@@ -1,5 +1,5 @@
 {% set name = 'pysiaf' %}
-{% set version = '0.9.0' %}
+{% set version = '0.10.0' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
