@@ -1,0 +1,44 @@
+{% set name = 'hstaxe' %}
+{% set version = '0.7.0' %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/spacetelescope/{{ name }}
+    license: BSD
+    summary: |
+        Spectral extraction tools for Hubble Space Telescope Grisms
+        Based on the original aXe package.
+
+build:
+    number: {{ number }}
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+requirements:
+    build:
+    - setuptools
+    - setuptools_scm
+    - cfitsio
+    - gsl
+    - wcstools
+    - python {{ python }}
+    run:
+    - numpy
+    - astropy
+    - cfitsio
+    - gsl
+    - stwcs
+    - stsci.imagestats
+    - drizzlepac
+    - drizzle
+    - wcstools
+
+source:
+    git_tag: {{ version }}
+    git_url: https://github.com/spacetelescope/{{ name }}.git
+
+test:
+    imports:
+    - hstaxe
