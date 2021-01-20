@@ -20,6 +20,12 @@ requirements:
     build:
     - setuptools
     - setuptools_scm
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - make
+    - numpy {{ numpy }}
     - cfitsio
     - gsl
     - wcstools
