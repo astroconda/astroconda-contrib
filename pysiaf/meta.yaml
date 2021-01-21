@@ -33,6 +33,7 @@ requirements:
     - numpydoc
     - requests >=2.21.0
     - PyQt >=5.0.0
+    - et_xmlfile
 
     run:
     - astropy >=1.2
