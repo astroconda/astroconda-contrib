@@ -19,12 +19,14 @@ requirements:
     build:
     - asdf
     - astropy >=3.1
+    - scipy
     - setuptools
     - numpy {{ numpy }}
     - python {{ python }}
     run:
     - asdf
     - astropy >=4.1
+    - scipy
     - numpy
     - python
 
