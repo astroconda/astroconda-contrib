@@ -1,5 +1,6 @@
 {% set name = "semantic_version" %}
 {% set version = "2.8.4" %}
+{% set number = "1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -9,7 +10,7 @@ source:
   url: https://files.pythonhosted.org/packages/67/24/7e8fcb6aa88bfc018f8e4c48c4dbc8e87d8c7b3c0d0d8b3b0c61a34d32c7/semantic_version-2.8.4.tar.gz
   sha256: 352459f640f3db86551d8054d1288608b29a96e880c7746f0a59c92879d412a3
 build:
-  number: 0
+  number: {{ number }}
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
 
 requirements:
