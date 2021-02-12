@@ -2,7 +2,7 @@
 export FCFLAGS="$FCFLAGS -fPIC"
 
 if [[ `uname` == Darwin ]]; then
-    export FC=/sw/bin/gfortran
+    export FC=/usr/local/bin/gfortran
     if [[ `uname -m` == x86_64 ]]; then
         export CFLAGS="$CFLAGS -m64"
         export LDFLAGS="$LDFLAGS -m64"
