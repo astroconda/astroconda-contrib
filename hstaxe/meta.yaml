@@ -1,5 +1,5 @@
 {% set name = 'hstaxe' %}
-{% set version = '0.7.0' %}
+{% set version = '1.0.0' %}
 {% set number = '0' %}
 
 about:
