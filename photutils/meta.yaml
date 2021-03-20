@@ -1,5 +1,5 @@
 {% set name = 'photutils' %}
-{% set version = '1.0.2' %}
+{% set version = '1.1.0' %}
 {% set tag = version %}
 {% set number = '0' %}
 
@@ -10,7 +10,7 @@ about:
 
 build:
   number: {{ number }}
-  skip: True [py27]
+  skip: True  # [py<37]
 
 package:
   name: {{ name }}
