@@ -11,4 +11,4 @@ if [[ -d ${usedir}/work ]]; then
 fi
 
 mkdir -p "${dest}"
-rsync -av --exclude '.git*' "${usedir}"/environment.yml "${usedir}"/notebooks/ "${dest}"/
+rsync -av --exclude '.git*' "${usedir}/README.md" "${usedir}"/notebooks/ "${dest}"/
