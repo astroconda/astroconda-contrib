@@ -1,6 +1,6 @@
 {% set name = 'gwcs' %}
 {% set version = '0.16.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
@@ -9,7 +9,7 @@ about:
 
 build:
     number: {{ number }}
-    skip: True [py27]
+    skip: True [py27 and py36]
 
 package:
     name: {{ name }}
