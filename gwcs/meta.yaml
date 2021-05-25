@@ -9,7 +9,7 @@ about:
 
 build:
     number: {{ number }}
-    skip: True [py27 or py36]
+    skip: True [py27 or py<37]
 
 package:
     name: {{ name }}
