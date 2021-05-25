@@ -20,8 +20,9 @@ requirements:
     - semantic_version >=2.8
     - pyyaml >=3.10
     - importlib_resources >=3  # [py<39]
+    - jmespath >=0.6.2
     - jsonschema >=3.0.2,<4.0
-    - packaging>=16.0
+    - packaging >=16.0
     - setuptools
     - setuptools_scm
     - numpy {{ numpy }}
@@ -30,8 +31,9 @@ requirements:
     - semantic_version >=2.8
     - pyyaml >=3.10
     - importlib_resources >=3  # [py<39]
+    - jmespath >=0.6.2
     - jsonschema >=3.0.2,<4.0
-    - packaging>=16.0
+    - packaging >=16.0
     - pytest
     - setuptools
     - setuptools_scm
