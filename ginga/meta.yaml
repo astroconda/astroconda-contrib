@@ -1,5 +1,5 @@
 {% set name = 'ginga' %}
-{% set version = '3.1.0' %}
+{% set version = '3.2.0' %}
 {% set tag = 'v' ~ version %}
 {% set number = '0' %}
 
@@ -18,19 +18,20 @@ package:
 
 requirements:
     build:
-    - astropy >=3
-    - qtpy
+    - astropy >=3.2
+    - qtpy >=1.1
     - pillow
     - setuptools
     - setuptools_scm
     - numpy {{ numpy }}
     - python {{ python }}
     run:
-    - astropy >=3
-    - qtpy
+    - astropy >=3.2
+    - qtpy >=1.1
     - pillow
     - numpy
     - python
+    - setuptools
 
 source:
     git_tag: {{ tag }}
