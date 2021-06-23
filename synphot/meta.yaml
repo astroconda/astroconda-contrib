@@ -1,6 +1,6 @@
 {% set reponame = 'synphot_refactor' %}
 {% set name = 'synphot' %}
-{% set version = '1.0.1' %}
+{% set version = '1.1.0' %}
 {% set number = '0' %}
 
 about:
@@ -19,16 +19,16 @@ package:
 requirements:
     build:
     - setuptools_scm
-    - astropy >=3
+    - astropy >=3.2
     - extension-helpers
-    - scipy >=0.14
+    - scipy >=1.1
     - numpy {{ numpy }}
     - pytest
     - setuptools
     - python {{ python }}
     run:
-    - astropy >=3
-    - scipy >=0.14
+    - astropy >=3.2
+    - scipy >=1.1
     - numpy
     - pytest
     - python
