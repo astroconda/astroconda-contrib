@@ -1,5 +1,5 @@
 {% set name = 'webbpsf-data' %}
-{% set version = '0.9.0' %}
+{% set version = '0.9.2' %}
 {% set number = '1' %}
 
 about:
@@ -16,4 +16,4 @@ package:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    url: https://stsci.box.com/shared/static/qcptcokkbx7fgi3c00w2732yezkxzb99.gz
+    url: https://stsci.box.com/shared/static/r7k2m3ruxb7a7a7t172epr4kq5ibmo78.gz
