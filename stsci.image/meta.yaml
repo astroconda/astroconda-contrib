@@ -1,5 +1,5 @@
 {% set name = 'stsci.image' %}
-{% set version = '2.3.3' %}
+{% set version = '2.3.4' %}
 {% set number = '0' %}
 
 about:
