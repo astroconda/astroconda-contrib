@@ -1,5 +1,5 @@
 {% set name = 'stsci.tools' %}
-{% set version = '4.0.0' %}
+{% set version = '4.0.1' %}
 {% set number = '0' %}
 
 about:
@@ -10,6 +10,7 @@ about:
 
 build:
     number: {{ number }}
+    skip: true  # [py2k]
 
 package:
     name: {{ name }}
@@ -17,14 +18,15 @@ package:
 
 requirements:
     build:
-    - astropy >=1.1
+    - astropy >=2
     - setuptools
+    - setuptools_scm
     - pytest-runner
     - numpy {{ numpy }}
     - python {{ python }}
 
     run:
-    - astropy >=1.1
+    - astropy >=2
     - numpy
     - python
 
