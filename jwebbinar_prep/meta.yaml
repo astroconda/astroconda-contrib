@@ -1,0 +1,19 @@
+{% set name = 'jwebbinar_prep' %}
+{% set version = 'v0.1' %}
+{% set number = '0' %}
+
+about:
+  home: https://github.com/spacetelscope/{{ name }}
+  license: BSD
+  summary: Collection of JWST JWebbinar notebooks
+
+build:
+  number: {{ number }}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_tag: {{ version }}
+  git_url: https://github.com/spacetelescope/{{ name }}.git
