@@ -1,7 +1,7 @@
 {% set name = 'jwebbinar_prep' %}
 {% set version = '0.1' %}
 {% set tag = 'v' + version %}
-{% set number = '1' %}
+{% set number = '0' %}
 
 about:
   home: https://github.com/spacetelscope/{{ name }}
