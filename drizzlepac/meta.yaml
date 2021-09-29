@@ -1,5 +1,5 @@
 {% set name = 'drizzlepac' %}
-{% set version = '3.2.1' %}
+{% set version = '3.3.0' %}
 {% set number = '0' %}
 
 about:
@@ -17,8 +17,8 @@ package:
 requirements:
     build:
     - acstools
-    - astropy>=3.1.2
-    - astroquery
+    - astropy>=4.0.0
+    - astroquery>=0.4
     - bokeh
     - fitsblender
     - graphviz
@@ -26,23 +26,25 @@ requirements:
     - lxml
     - nictools
     - nose
+    - scikit-learn>=0.20
     - scipy
     - secretstorage [linux]
     - spherical-geometry
-    - stsci.image
+    - stsci.image>=2.3.4
     - stsci.imagestats
-    - stsci.skypac
+    - stsci.skypac>=1.0.7
     - stsci.stimage
-    - stwcs
+    - stsci.tools>=4.0
+    - stwcs>=1.5.3
     - stregion
     - setuptools
     - pandas
-    - photutils
+    - photutils>=1.0.0
     - pysynphot
     - pypdf2
     - pytables
-    - tweakwcs
-    - numpy=>1.18
+    - tweakwcs>=0.7.2
+    - numpy=>1.19
     - python {{ python }}
     run:
     - acstools
@@ -54,6 +56,7 @@ requirements:
     - nose
     - jeepney
     - lxml
+    - scikit-learn
     - scipy
     - secretstorage [linux]
     - spherical-geometry
@@ -61,6 +64,7 @@ requirements:
     - stsci.imagestats
     - stsci.skypac
     - stsci.stimage
+    - stsci.tools
     - stwcs
     - stregion
     - setuptools
@@ -72,6 +76,7 @@ requirements:
     - tweakwcs
     - numpy
     - python
+ 
 
 source:
     git_tag: {{ version }}
