@@ -26,7 +26,7 @@ requirements:
     - scipy >=1.5.0
     - matplotlib >=3.2.0
     - poppy ==1.0.1
-    - photutils
+    - photutils >=1.0.0
     - webbpsf-data ==1.0.0
     - setuptools
     - setuptools_scm
@@ -41,7 +41,7 @@ requirements:
     - scipy >=1.5.0
     - matplotlib >=3.2.0
     - poppy ==1.0.1
-    - photutils
+    - photutils >=1.0.0
     - webbpsf-data ==1.0.0
     - setuptools
     - setuptools_scm
