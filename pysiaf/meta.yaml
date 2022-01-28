@@ -1,5 +1,5 @@
 {% set name = 'pysiaf' %}
-{% set version = '0.11.0' %}
+{% set version = '0.14.0' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
@@ -20,30 +20,31 @@ package:
 build:
     number: {{ number }}
 
+
 requirements:
     build:
-    - astropy >=1.2
-    - numpy >=1.13
-    - matplotlib >=3.0.0
-    - lxml >=3.6.4
-    - scipy >=0.17
-    - openpyxl >=2.6.0
+    - astropy >=4.3.1
+    - numpy >=1.21.4
+    - matplotlib >=3.4.3
+    - lxml >=4.6.4
+    - scipy >=1.7.2
+    - openpyxl >=3.0.9
     - python {{ python }}
     - setuptools
     - numpydoc
-    - requests >=2.21.0
+    - requests >=2.26.0
     - PyQt >=5.0.0
     - et_xmlfile
 
     run:
-    - astropy >=1.2
-    - numpy >=1.9
-    - matplotlib >=1.4.3
-    - lxml >=3.6.4
-    - scipy >=0.17
-    - openpyxl >=2.6.0
+    - astropy >=4.3.1
+    - numpy >=1.21.4
+    - matplotlib >=3.4.3
+    - lxml >=4.6.4
+    - scipy >=1.7.2
+    - openpyxl >=3.0.9
     - python {{ python }}
-    - requests >=2.21.0
+    - requests >=2.26.0
     - PyQt >=5.0.0
 
 test:
