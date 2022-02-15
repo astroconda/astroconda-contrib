@@ -27,7 +27,7 @@ requirements:
     - setuptools
     - setuptools_scm
     - python {{ python }}
-    - fonttools>=4.22.0
+
     run:
     - astropy >=4.0.0
     - numpy >=1.18.0
@@ -36,7 +36,6 @@ requirements:
     - setuptools
     - setuptools_scm
     - python
-    - fonttools>=4.22.0
 
 source:
     git_tag: {{ tag }}
