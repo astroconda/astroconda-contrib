@@ -26,6 +26,7 @@ requirements:
     - matplotlib >=3.2.0
     - setuptools
     - setuptools_scm
+    - fonttools>=4.22.0
     - python {{ python }}
 
     run:
@@ -35,6 +36,7 @@ requirements:
     - matplotlib >=3.2.0
     - setuptools
     - setuptools_scm
+    - fonttools>=4.22.0
     - python
 
 source:
