@@ -17,8 +17,8 @@ package:
 requirements:
     build:
     - acstools
-    - astropy>=4.0.0
-    - astroquery>=0.4
+    - astropy >=4.0.0
+    - astroquery >=0.4
     - bokeh
     - fitsblender
     - graphviz
@@ -26,25 +26,25 @@ requirements:
     - lxml
     - nictools
     - nose
-    - scikit-learn>=0.20
+    - scikit-learn >=0.20
     - scipy
     - secretstorage [linux]
     - spherical-geometry
-    - stsci.image>=2.3.4
+    - stsci.image >=2.3.4
     - stsci.imagestats
-    - stsci.skypac>=1.0.7
+    - stsci.skypac >=1.0.7
     - stsci.stimage
-    - stsci.tools>=4.0
-    - stwcs>=1.5.3
+    - stsci.tools >=4.0
+    - stwcs >=1.5.3
     - stregion
     - setuptools
     - pandas
-    - photutils>=1.0.0
+    - photutils >=1.0.0
     - pysynphot
     - pypdf2
     - pytables
-    - tweakwcs>=0.7.2
-    - numpy=>1.19
+    - tweakwcs >=0.7.2
+    - numpy {{ numpy }}
     - python {{ python }}
     run:
     - acstools
@@ -76,7 +76,6 @@ requirements:
     - tweakwcs
     - numpy
     - python
- 
 
 source:
     git_tag: {{ version }}
