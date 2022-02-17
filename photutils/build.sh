@@ -1,1 +1,1 @@
-$PYTHON -m pip install -v --no-deps .
+$PYTHON -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv

@@ -1,6 +1,6 @@
 {% set name = 'sphinxcontrib-programoutput' %}
 {% set version = '0.11' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://pypi.python.org/packages/source/s/{{ name }}

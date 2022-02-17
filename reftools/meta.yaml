@@ -1,6 +1,6 @@
 {% set name = 'reftools' %}
 {% set version = '2.1.0' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

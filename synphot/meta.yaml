@@ -1,7 +1,7 @@
 {% set reponame = 'synphot_refactor' %}
 {% set name = 'synphot' %}
 {% set version = '1.1.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ reponame }}

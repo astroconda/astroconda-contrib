@@ -1,6 +1,6 @@
 {% set name = 'gwcs' %}
 {% set version = '0.16.1' %}
-{% set number = '2' %}
+{% set number = '3' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

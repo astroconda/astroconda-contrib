@@ -1,7 +1,7 @@
 {% set name = 'astroscrappy' %}
 {% set version = '1.0.5' %}
 {% set tag = 'v' + version %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
   home: https://github.com/astropy/astroscrappy

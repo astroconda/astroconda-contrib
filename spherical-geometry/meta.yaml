@@ -1,7 +1,7 @@
 {% set name = 'spherical-geometry' %}
 {% set reponame = 'spherical_geometry' %}
 {% set version = '1.2.22' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ reponame }}

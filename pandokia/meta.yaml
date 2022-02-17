@@ -1,6 +1,6 @@
 {% set name = 'pandokia' %}
 {% set version = '2.4.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://ssb.stsci.edu/testing/{{ name }}

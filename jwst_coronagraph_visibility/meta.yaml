@@ -1,6 +1,6 @@
 {% set name = 'jwst_coronagraph_visibility' %}
 {% set version = '0.4.4' %}
-{% set number = '0' %}
+{% set number = '1' %}
 {% set org = 'spacetelescope' %}
 
 about:

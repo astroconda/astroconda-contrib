@@ -1,6 +1,6 @@
 {% set name = 'stsci.sphinxext' %}
 {% set version = '1.2.2' %}
-{% set number = '2' %}
+{% set number = '3' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

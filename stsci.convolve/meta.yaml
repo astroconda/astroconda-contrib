@@ -1,6 +1,6 @@
 {% set name = 'stsci.convolve' %}
 {% set version = '2.2.2' %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

@@ -1,6 +1,6 @@
 {% set name = 'stwcs' %}
 {% set version = '1.6.1' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

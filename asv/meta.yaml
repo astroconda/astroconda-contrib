@@ -1,7 +1,7 @@
 {% set name = 'asv' %}
 {% set version = '0.1.1' %}
 {% set tag = 'v' + version %}
-{% set number = '2' %}
+{% set number = '3' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

@@ -1,6 +1,6 @@
 {% set name = 'wfpc2tools' %}
 {% set version = '1.0.4' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

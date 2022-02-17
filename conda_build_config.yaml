@@ -1,11 +1,9 @@
 python:
-  - 3.5
-  - 3.6
   - 3.7
   - 3.8
 
 numpy:
-  - 1.14
+  - 1.19
 
 pin_build_as_run:
   python:

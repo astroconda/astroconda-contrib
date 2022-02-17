@@ -1,12 +1,12 @@
 {% set name = 'jwst-visit-parser' %}
 {% set version = '0.1.2' %}
 {% set tag = version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}
     license: BSD
-    summary: 
+    summary:
         Python tools for parsing JWST visit (.vst) files
 
 source:
@@ -19,7 +19,7 @@ package:
 
 build:
     number: {{ number }}
-    
+
 requirements:
     build:
     - setuptools
