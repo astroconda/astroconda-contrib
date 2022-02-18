@@ -31,7 +31,7 @@ requirements:
     run:
     - setuptools
     - numpy
-    - python {{ python }}
+    - python
     - pytest
     - astropy
 
