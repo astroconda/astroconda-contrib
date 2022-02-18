@@ -1,7 +1,7 @@
 {% set name = 'mosviz' %}
 {% set version = '0.3.0' %}
 {% set tag = version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
   home: https://github.com/spacetelescope/mosviz

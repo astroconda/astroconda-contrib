@@ -1,6 +1,6 @@
 {% set name = 'secretstorage' %}
 {% set version = '2.3.1' %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
   home: https://github.com/mitya57/{{ name }}

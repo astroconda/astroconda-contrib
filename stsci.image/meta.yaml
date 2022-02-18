@@ -1,6 +1,6 @@
 {% set name = 'stsci.image' %}
 {% set version = '2.3.4' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

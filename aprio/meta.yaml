@@ -1,7 +1,7 @@
 {% set name = 'aprio' %}
 {% set version = '1.0.1' %}
 {% set tag = 'v' + version %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
     home: http://bitbucket.org/jhunkeler/{{ name }}

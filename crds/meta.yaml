@@ -1,6 +1,6 @@
 {% set name = 'crds' %}
 {% set version = '10.3.11' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: http://www.stsci.edu/hst/observatory/crds/

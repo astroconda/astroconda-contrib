@@ -1,6 +1,6 @@
 {% set name = 'pyobjc-core' %}
 {% set version = '3.1.1' %}
-{% set number = '1' %}
+{% set number = '2' %}
 
 about:
     home: http://pyobjc.sourceforge.net/

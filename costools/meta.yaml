@@ -1,6 +1,6 @@
 {% set name = 'costools' %}
 {% set version = '1.2.3' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

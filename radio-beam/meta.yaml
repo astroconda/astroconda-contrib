@@ -2,7 +2,7 @@
 {% set reponame = 'radio_beam' %}
 {% set version = '0.2' %}
 {% set tag = 'v' + version %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/radio-astro-tools/{{ reponame }}

@@ -1,6 +1,6 @@
 {% set name = 'wfc3tools' %}
 {% set version = '1.3.5' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

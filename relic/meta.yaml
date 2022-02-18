@@ -1,6 +1,6 @@
 {% set name = 'relic' %}
 {% set version = '1.1.2' %}
-{% set number = '13' %}
+{% set number = '14' %}
 
 about:
     home: http://github.com/jhunkeler/{{ name }}

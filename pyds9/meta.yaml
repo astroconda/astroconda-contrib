@@ -1,6 +1,6 @@
 {% set name = 'pyds9' %}
 {% set version = "1.9.0.dev" ~ GIT_DESCRIBE_NUMBER ~ "+" ~ GIT_DESCRIBE_HASH %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/ericmandel/{{ name }}

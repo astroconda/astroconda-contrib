@@ -1,6 +1,6 @@
 {% set name = 'calcos' %}
 {% set version = '3.3.10' %}
-{% set number = '0' %}
+{% set number = '1' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

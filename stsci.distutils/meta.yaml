@@ -1,6 +1,6 @@
 {% set name = 'stsci.distutils' %}
 {% set version = '0.3.8' %}
-{% set number = '2' %}
+{% set number = '3' %}
 
 about:
     home: https://github.com/spacetelescope/{{ name }}

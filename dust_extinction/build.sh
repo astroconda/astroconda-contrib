@@ -1,1 +1,1 @@
-$PYTHON setup.py install --single-version-externally-managed --record=root.txt
+$PYTHON -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
