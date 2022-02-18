@@ -30,8 +30,8 @@ requirements:
 
     run:
     - setuptools
-    - numpy {{ numpy }}
-    - python {{ python }}
+    - numpy
+    - python
     - pytest
     - astropy
 
