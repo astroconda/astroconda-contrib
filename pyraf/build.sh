@@ -3,13 +3,4 @@ if [[ `uname -s` == "Darwin" ]]; then
     export LDFLAGS="-L/opt/X11/lib"
 fi
 
-if [[ $PY3K > 0 ]]; then
-set +e
-    echo Running 2to3...
-    2to3 -w . &>/dev/null
-    if [[ $? != 0 ]]; then
-        echo "ERROR: 2to3 technically failed!"
-    fi
-fi
-
 $PYTHON -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv

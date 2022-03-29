@@ -1,9 +1,10 @@
 {% set name = 'pyraf' %}
-{% set version = '2.1.15' %}
-{% set number = '1' %}
+{% set version = '2.2.1rc1' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
 
 about:
-    home: https://github.com/spacetelescope/{{ name }}
+    home: https://github.com/iraf-community/{{ name }}
     license: BSD
     summary: |
         Provides a Pythonic interface to IRAF
@@ -17,32 +18,31 @@ package:
 
 requirements:
     build:
-    - d2to1
-    - stsci.distutils
     - astropy >=1.1
+    - configobj >=5
     - ipython
     - matplotlib
     - pyobjc-core >=3.0.4 [osx]
     - pyobjc-framework-cocoa >=3.0.4 [osx]
     - pyobjc-framework-quartz >=3.0.4 [osx]
-    - stsci.tools
     - setuptools
+    - setuptools_scm
     - numpy {{ numpy }}
     - python {{ python }}
     run:
     - astropy >=1.1
+    - configobj >=5
     - ipython
     - matplotlib
     - pyobjc-core >=3.0.4 [osx]
     - pyobjc-framework-cocoa >=3.0.4 [osx]
     - pyobjc-framework-quartz >=3.0.4 [osx]
-    - stsci.tools
     - numpy
     - python
 
 source:
-    git_tag: {{ version }}
-    git_url: https://github.com/spacetelescope/{{ name }}.git
+    git_tag: {{ tag }}
+    git_url: https://github.com/iraf-community/{{ name }}.git
 
 test:
     commands:
