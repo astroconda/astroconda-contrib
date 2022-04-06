@@ -1,5 +1,5 @@
 {% set name = 'pyraf' %}
-{% set version = '2.2.1rc1' %}
+{% set version = '2.2.1' %}
 {% set tag = 'v' + version %}
 {% set number = '0' %}
 
