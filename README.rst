@@ -1,4 +1,4 @@
-Astroconda
+Astroconda-contrib
 ##########
 
 :Warning:
